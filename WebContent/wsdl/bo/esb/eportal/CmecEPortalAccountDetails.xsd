@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/BWZResponseDetailWrapper" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalAccountDetails">
+    <xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/BWZResponseDetailWrapper" schemaLocation="CmecBWZResponseDetailWrapper.xsd"/>
+	<xsd:complexType name="CmecEPortalAccountDetails">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="Name" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="CMECAccountNumber" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CMECSortCode" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CMECRollNo" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountType" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ExpirqationDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="MethodOfPayment" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SuspensionDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Status" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="StartDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BwzAccountNumber" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BwzSortCode" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="BwzRollNo" type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="MOPSequenceNumber" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CollectionDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="BwzResponsesWrapper" type="bons1:CmecBWZResponseDetailWrapper">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

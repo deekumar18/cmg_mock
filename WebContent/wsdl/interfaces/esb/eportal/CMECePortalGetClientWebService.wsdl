@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECGetClientDetailsWebService" xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetClientDetailsRequest" xmlns:bons9="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetClientDetailsResponse" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECGetClientDetailsWebService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CMECePortalGetClientWebService" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECGetClientDetailsWebService">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECGetClientDetailsWebService">
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetClientDetailsResponse" schemaLocation="../../../bo/esb/eportal/CmecGetClientDetailsResponse.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetClientDetailsRequest" schemaLocation="../../../bo/esb/eportal/CmecGetClientDetailsRequest.xsd"/>
+						
+
+			<xsd:element name="getClientDetails">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getClientDetailsInput" nillable="true" type="bons1:CmecGetClientDetailsRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="getClientDetailsResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getClientDetailsOutput" nillable="true" type="bons9:CmecGetClientDetailsResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+		</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getClientDetailsResponseMsg">
+    <wsdl:part element="tns:getClientDetailsResponse" name="getClientDetailsResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getClientDetailsRequestMsg">
+    <wsdl:part element="tns:getClientDetails" name="getClientDetailsParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CMECePortalGetClientWebService">
+    <wsdl:operation name="getClientDetails">
+      <wsdl:input message="tns:getClientDetailsRequestMsg" name="getClientDetailsRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getClientDetailsResponseMsg" name="getClientDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CMECGetClientDetailsWebServiceSOAP" type="tns:CMECePortalGetClientWebService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getClientDetails">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECePortalGetClientWebServiceExport_CMECePortalGetClientWebServiceHttp_Service/GetClientDetails"/>
+      <wsdl:input name="getClientDetailsRequest">
+        <soap:body parts="getClientDetailsParameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getClientDetailsResponse">
+        <soap:body parts="getClientDetailsResult" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CMECePortalGetClientWebService">
+    <wsdl:port binding="tns:CMECGetClientDetailsWebServiceSOAP" name="CMECePortalGetClientWebService">
+      <soap:address location="http://localhost:8989/testSOAP/services/CMECePortalGetClientWebService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

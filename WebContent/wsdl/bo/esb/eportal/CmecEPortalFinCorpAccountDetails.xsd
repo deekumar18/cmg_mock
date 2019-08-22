@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalAccountDetails" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalFinCorpAccountDetails">
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalAccountDetails" schemaLocation="CmecEPortalAccountDetails.xsd">
+	</xsd:import>
+	<xsd:complexType name="CmecEPortalFinCorpAccountDetails">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="AccountNumber" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountType" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccountName" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CaseNumber" type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="ContactCIF" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="AccountDetails" type="bons0:CmecEPortalAccountDetails">
+			</xsd:element>
+
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

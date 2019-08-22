@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalEmployerDetails" xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalContactDetails" xmlns:bons2="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalFinCorpAccountDetails" xmlns:bons3="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalAddress" xmlns:bons4="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmployerDetailsResponse">
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalFinCorpAccountDetails" schemaLocation="CmecEPortalFinCorpAccountDetails.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd" schemaLocation="../../common/Response.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalEmployerDetails" schemaLocation="CmecEPortalEmployerDetails.xsd"/>
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalContactDetails" schemaLocation="CmecEPortalContactDetails.xsd"/>
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalAddress" schemaLocation="CmecEPortalAddress.xsd"/>
+	<xsd:complexType name="CmecGetEmployerDetailsResponse">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="ResponseHeader" type="bons4:Response">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EmployerDetails" type="bons0:CmecEPortalEmployerDetails">
+			</xsd:element>
+
+
+
+
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="EmployerAddress" type="bons3:CmecEPortalAddress">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="EmployerContact" type="bons1:CmecEPortalContactDetails">
+			</xsd:element>
+
+
+
+
+
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="FinCorpDetails" type="bons2:CmecEPortalFinCorpAccountDetails">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

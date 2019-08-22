@@ -1,0 +1,128 @@
+<ns1:deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" xmlns:ns1="http://xml.apache.org/axis/wsdd/">
+ <ns1:globalConfiguration>
+  <ns1:parameter name="sendMultiRefs" value="true"/>
+  <ns1:parameter name="disablePrettyXML" value="true"/>
+  <ns1:parameter name="adminPassword" value="admin"/>
+  <ns1:parameter name="attachments.Directory" value="C:\cmg_soap_project\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\testSOAP\WEB-INF\attachments"/>
+  <ns1:parameter name="dotNetSoapEncFix" value="true"/>
+  <ns1:parameter name="enableNamespacePrefixOptimization" value="false"/>
+  <ns1:parameter name="sendXMLDeclaration" value="true"/>
+  <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+  <ns1:parameter name="sendXsiTypes" value="true"/>
+  <ns1:requestFlow>
+   <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
+    <ns1:parameter name="scope" value="session"/>
+   </ns1:handler>
+   <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
+    <ns1:parameter name="scope" value="request"/>
+    <ns1:parameter name="extension" value=".jwr"/>
+   </ns1:handler>
+  </ns1:requestFlow>
+ </ns1:globalConfiguration>
+ <ns1:handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper"/>
+ <ns1:handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"/>
+ <ns1:handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder"/>
+ <ns1:service name="CMECePortalGetEmployerWebService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:parameter name="allowedMethods" value="*"/>
+  <ns1:parameter name="wsdlPortType" value="CMECePortalGetEmployerWebService"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlServicePort" value="CMECePortalGetEmployerWebService"/>
+  <ns1:parameter name="className" value="uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECGetEmployerDetailsWebService.CMECGetEmployerDetailsWebServiceSOAPSkeleton"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECGetEmployerDetailsWebService"/>
+  <ns1:parameter name="wsdlServiceElement" value="CMECePortalGetEmployerWebService"/>
+  <ns1:parameter name="schemaUnqualified" value="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/payment/BankWizardResponseDetail,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalFinCorpAccountDetails,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalEmployerDetails,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/BWZResponseDetailWrapper,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmployerDetailsRequest,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalAccountDetails,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmployerDetailsResponse,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalAddress,http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECGetEmployerDetailsWebService,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalContactDetails,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd"/>
+  <ns2:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns1:BankWizardResponseDetail" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.payment.BankWizardResponseDetail.BankWizardResponseDetail" xmlns:ns1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/payment/BankWizardResponseDetail" xmlns:ns2="http://xml.apache.org/axis/wsdd/"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns2:CmecEPortalFinCorpAccountDetails" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalFinCorpAccountDetails.CmecEPortalFinCorpAccountDetails" xmlns:ns2="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalFinCorpAccountDetails"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns3:CmecEPortalContactDetails" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalContactDetails.CmecEPortalContactDetails" xmlns:ns3="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalContactDetails"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns4:CmecEPortalAccountDetails" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalAccountDetails.CmecEPortalAccountDetails" xmlns:ns4="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalAccountDetails"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns5:Response" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.Response" xmlns:ns5="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns6:CmecEPortalEmployerDetails" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalEmployerDetails.CmecEPortalEmployerDetails" xmlns:ns6="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalEmployerDetails"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns7:CmecGetEmployerDetailsResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecGetEmployerDetailsResponse.CmecGetEmployerDetailsResponse" xmlns:ns7="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmployerDetailsResponse"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns8:CmecGetEmployerDetailsRequest" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecGetEmployerDetailsRequest.CmecGetEmployerDetailsRequest" xmlns:ns8="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmployerDetailsRequest"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns9:CMECHeader" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.CMECHeader_xsd.CMECHeader" xmlns:ns9="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns10:&gt;Response&gt;responseDetails" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.ResponseResponseDetails" xmlns:ns10="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns11:CmecEPortalAddress" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalAddress.CmecEPortalAddress" xmlns:ns11="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalAddress"/>
+  <ns1:arrayMapping innerType="ns13:BankWizardResponseDetail" languageSpecificType="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.payment.BankWizardResponseDetail.BankWizardResponseDetail[]" qname="ns12:CmecBWZResponseDetailWrapper" xmlns:ns12="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/BWZResponseDetailWrapper" xmlns:ns13="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/payment/BankWizardResponseDetail"/>
+ </ns1:service>
+ <ns1:service name="AdminService" provider="java:MSG">
+  <ns1:parameter name="allowedMethods" value="AdminService"/>
+  <ns1:parameter name="enableRemoteAdmin" value="false"/>
+  <ns1:parameter name="className" value="org.apache.axis.utils.Admin"/>
+  <ns1:namespace>http://xml.apache.org/axis/wsdd/</ns1:namespace>
+ </ns1:service>
+ <ns1:service name="Version" provider="java:RPC">
+  <ns1:parameter name="allowedMethods" value="getVersion"/>
+  <ns1:parameter name="className" value="org.apache.axis.Version"/>
+ </ns1:service>
+ <ns1:service name="CMECePortalGetClientWebService" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:parameter name="allowedMethods" value="*"/>
+  <ns1:parameter name="wsdlPortType" value="CMECePortalGetClientWebService"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlServicePort" value="CMECePortalGetClientWebService"/>
+  <ns1:parameter name="className" value="uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECGetClientDetailsWebService.CMECGetClientDetailsWebServiceSOAPSkeleton"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECGetClientDetailsWebService"/>
+  <ns1:parameter name="wsdlServiceElement" value="CMECePortalGetClientWebService"/>
+  <ns1:parameter name="schemaUnqualified" value="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalHLSCaseDetails,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetClientDetailsRequest,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalAddress,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd,http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECGetClientDetailsWebService,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetClientDetailsResponse,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalCaseContactDetails,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalContactDetails,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns14:CmecEPortalContactDetails" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalContactDetails.CmecEPortalContactDetails" xmlns:ns14="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalContactDetails"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns15:Response" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.Response" xmlns:ns15="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns16:CmecEPortalCaseContactDetails" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalCaseContactDetails.CmecEPortalCaseContactDetails" xmlns:ns16="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalCaseContactDetails"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns17:CmecEPortalHLSCaseDetails" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalHLSCaseDetails.CmecEPortalHLSCaseDetails" xmlns:ns17="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalHLSCaseDetails"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns18:CmecGetClientDetailsResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecGetClientDetailsResponse.CmecGetClientDetailsResponse" xmlns:ns18="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetClientDetailsResponse"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns19:CMECHeader" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.CMECHeader_xsd.CMECHeader" xmlns:ns19="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns20:&gt;Response&gt;responseDetails" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.ResponseResponseDetails" xmlns:ns20="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns21:CmecEPortalAddress" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalAddress.CmecEPortalAddress" xmlns:ns21="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalAddress"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns22:CmecGetClientDetailsRequest" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecGetClientDetailsRequest.CmecGetClientDetailsRequest" xmlns:ns22="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetClientDetailsRequest"/>
+ </ns1:service>
+ <ns1:service name="CMECAddressDetailsServicePort" provider="java:RPC" style="document" use="literal">
+  <ns1:parameter name="allowedMethods" value="*"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="CMECAddressDetails"/>
+  <ns1:parameter name="className" value="uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECAddressDetailsService.CMECAddressDetailsBindingSkeleton"/>
+  <ns1:parameter name="wsdlServicePort" value="CMECAddressDetailsServicePort"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECAddressDetailsService"/>
+  <ns1:parameter name="wsdlServiceElement" value="CMECAddressDetailsService"/>
+  <ns1:parameter name="schemaUnqualified" value="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/asbo/address/GetAddressDetailsRequest,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/asbo/address/GetAddressDetailsResponse,http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECAddressDetailsService,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/asbo/address/Address,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns23:&gt;GetAddressDetailsResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECAddressDetailsService.GetAddressDetailsResponse" xmlns:ns23="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECAddressDetailsService"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns24:&gt;GetAddressDetails" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECAddressDetailsService.GetAddressDetails" xmlns:ns24="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECAddressDetailsService"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns25:Address" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.asbo.address.Address.Address" xmlns:ns25="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/asbo/address/Address"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns26:Response" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.Response" xmlns:ns26="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns27:GetAddressDetailsRequest" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.asbo.address.GetAddressDetailsRequest.GetAddressDetailsRequest" xmlns:ns27="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/asbo/address/GetAddressDetailsRequest"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns28:CMECHeader" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.CMECHeader_xsd.CMECHeader" xmlns:ns28="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns29:GetAddressDetailsResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.asbo.address.GetAddressDetailsResponse.GetAddressDetailsResponse" xmlns:ns29="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/asbo/address/GetAddressDetailsResponse"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns30:&gt;Response&gt;responseDetails" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.ResponseResponseDetails" xmlns:ns30="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd"/>
+  <ns1:arrayMapping innerType="ns32:Address" languageSpecificType="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.asbo.address.Address.Address[]" qname="ns31:Addresses" xmlns:ns31="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/asbo/address/GetAddressDetailsResponse" xmlns:ns32="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/asbo/address/Address"/>
+ </ns1:service>
+ <ns1:service name="CMECCorrespondenceWebService_Port" provider="java:RPC" style="document" use="literal">
+  <ns1:parameter name="allowedMethods" value="*"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="CMECCorrespondenceWebService"/>
+  <ns1:parameter name="className" value="uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECCorrespondenceWebService.CMECCorrespondenceWebServiceBindingSkeleton"/>
+  <ns1:parameter name="wsdlServicePort" value="CMECCorrespondenceWebService_Port"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECCorrespondenceWebService"/>
+  <ns1:parameter name="wsdlServiceElement" value="CMECCorrespondenceWebService_Service"/>
+  <ns1:parameter name="schemaUnqualified" value="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECCorrespondenceWebService,http://CMECLibraryR6/uk/gov/futurescheme/cmec/bo/esb/correspondence/RetrieveDocumentResponse,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/gbo/correspondence/Content.xsd,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/correspondence/RetrieveDocumentRequest,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns33:CMECHeader" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.CMECHeader_xsd.CMECHeader" xmlns:ns33="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns34:RetrieveDocumentResponse" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:CMECLibraryR6.uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse.RetrieveDocumentResponse" xmlns:ns34="http://CMECLibraryR6/uk/gov/futurescheme/cmec/bo/esb/correspondence/RetrieveDocumentResponse"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns35:&gt;Response&gt;responseDetails" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.ResponseResponseDetails" xmlns:ns35="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns36:Response" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.Response" xmlns:ns36="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns37:RetrieveDocumentRequest" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.correspondence.RetrieveDocumentRequest.RetrieveDocumentRequest" xmlns:ns37="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/correspondence/RetrieveDocumentRequest"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns38:Content" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.gbo.correspondence.Content_xsd.Content" xmlns:ns38="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/gbo/correspondence/Content.xsd"/>
+ </ns1:service>
+ <ns1:transport name="http">
+  <ns1:requestFlow>
+   <ns1:handler type="URLMapper"/>
+   <ns1:handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler"/>
+  </ns1:requestFlow>
+  <ns1:parameter name="qs:list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <ns1:parameter name="qs:wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+  <ns1:parameter name="qs.list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <ns1:parameter name="qs.method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <ns1:parameter name="qs:method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <ns1:parameter name="qs.wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+ </ns1:transport>
+ <ns1:transport name="local">
+  <ns1:responseFlow>
+   <ns1:handler type="LocalResponder"/>
+  </ns1:responseFlow>
+ </ns1:transport>
+</ns1:deployment>
