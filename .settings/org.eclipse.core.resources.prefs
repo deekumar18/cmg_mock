@@ -19,6 +19,9 @@ encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/eportal/CmecGe
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/eportal/CmecGetEmployerDetailsRequest/CmecGetEmployerDetailsRequest.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/eportal/CmecGetEmployerDetailsResponse/CmecGetEmployerDetailsResponse.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/payment/BankWizardResponseDetail/BankWizardResponseDetail.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/payment/CmecSubmitBankValidationRequest/CmecSubmitBankValidationRequest.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/payment/CmecSubmitBankValidationResponse/CmecSubmitBankValidationResponse.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/payment/CmecSubmitBankValidationResponse/Response.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/gbo/correspondence/Content_xsd/Content.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECAddressDetailsService/CMECAddressDetails.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECAddressDetailsService/CMECAddressDetailsBindingImpl.java=UTF-8
@@ -28,6 +31,12 @@ encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECAddres
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECAddressDetailsService/CMECAddressDetailsServiceLocator.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECAddressDetailsService/GetAddressDetails.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECAddressDetailsService/GetAddressDetailsResponse.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECBankWizardWebservice/CMECBankWizardWebservice_BindingImpl.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECBankWizardWebservice/CMECBankWizardWebservice_BindingSkeleton.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECBankWizardWebservice/CMECBankWizardWebservice_BindingStub.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECBankWizardWebservice/CMECBankWizardWebservice_PortType.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECBankWizardWebservice/CMECBankWizardWebservice_Service.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECBankWizardWebservice/CMECBankWizardWebservice_ServiceLocator.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECCorrespondenceWebService/CMECCorrespondenceWebService.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECCorrespondenceWebService/CMECCorrespondenceWebServiceBindingImpl.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECCorrespondenceWebService/CMECCorrespondenceWebServiceBindingSkeleton.java=UTF-8
