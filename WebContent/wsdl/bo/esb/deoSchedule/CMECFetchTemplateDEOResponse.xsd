@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd" xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECFetchDEODetailsResponse" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECFetchTemplateDEOResponse">
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECFetchDEODetailsResponse" schemaLocation="CMECFetchDEODetailsResponse.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd" schemaLocation="../../common/Response.xsd"/>
+
+	<xsd:complexType name="CMECFetchTemplateDEOResponse">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="ResponseHeader" type="bons0:Response">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="FetchDEOResponse" type="bons1:FetchDEOResponse">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

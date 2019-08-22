@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalDocumentDetails">
+	<xsd:complexType name="CmecEPortalDocumentDetails">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="DocId" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="ClientFacingName" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Language" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TemplateCode" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

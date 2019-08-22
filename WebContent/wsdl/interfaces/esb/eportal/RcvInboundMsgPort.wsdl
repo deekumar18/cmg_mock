@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CMECRcvInboundMessageReq" xmlns:bons2="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CMECRcvInboundMessageRes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECRcvInboundMessageInterface" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CMECRcvInboundMessageInterface" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECRcvInboundMessageInterface">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECRcvInboundMessageInterface">
+      <xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CMECRcvInboundMessageRes" schemaLocation="../../../bo/esb/eportal/CMECRcvInboundMessageRes.xsd"/>
+      <xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CMECRcvInboundMessageReq" schemaLocation="../../../bo/esb/eportal/CMECRcvInboundMessageReq.xsd"/>
+      <xsd:element name="RcvInboundMessage">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="RcvInboundMessagesReq" nillable="true" type="bons1:CMECRcvInboundMessageReq"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="RcvInboundMessageResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="RcvInboundMessagesRes" nillable="true" type="bons2:CMECRcvInboundMessageRes"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="RcvInboundMessageRequestMsg">
+    <wsdl:part element="tns:RcvInboundMessage" name="RcvInboundMessageParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RcvInboundMessageResponseMsg">
+    <wsdl:part element="tns:RcvInboundMessageResponse" name="RcvInboundMessageResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CMECRcvInboundMessageInterface">
+    <wsdl:operation name="RcvInboundMessage">
+      <wsdl:input message="tns:RcvInboundMessageRequestMsg" name="RcvInboundMessageRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:RcvInboundMessageResponseMsg" name="RcvInboundMessageResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RcvInboundMsgBinding" type="tns:CMECRcvInboundMessageInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RcvInboundMessage">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECRcvInboundMessageInterface/RcvInboundMessage"/>
+      <wsdl:input name="RcvInboundMessageRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="RcvInboundMessageResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RcvInboundMsgService">
+    <wsdl:port binding="tns:RcvInboundMsgBinding" name="RcvInboundMsgPort">
+      <soap:address location="http://localhost:8989/testSOAP/services/RcvInboundMsgPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

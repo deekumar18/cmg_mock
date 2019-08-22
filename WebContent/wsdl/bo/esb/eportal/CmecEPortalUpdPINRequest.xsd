@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdPINRequest">
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd" schemaLocation="../../common/CMECHeader.xsd">
+	</xsd:import>
+	<xsd:complexType name="CmecEPortalUpdPINRequest">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="RequestHeader" type="bons0:CMECHeader">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="CaseNumber" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SCIN" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="Source" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="UpdatePINFlag" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

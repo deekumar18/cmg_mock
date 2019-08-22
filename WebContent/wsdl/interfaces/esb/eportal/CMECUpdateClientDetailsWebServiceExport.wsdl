@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:bons0="http://www.example.org/CMECUpdateClientDetailsWebService/" xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdCntctDetailsRequest" xmlns:bons10="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CMECEPortalUpdEmplymntDetailsResponse" xmlns:bons11="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdateMOPRequest" xmlns:bons12="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdateMOPResponse" xmlns:bons13="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdPINRequest" xmlns:bons14="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdPINResponse" xmlns:bons16="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdLoginStatusRequest" xmlns:bons17="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdLoginStatusResponse" xmlns:bons2="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdCntctDetailsResponse" xmlns:bons3="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdAddrDetailsResp" xmlns:bons4="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdPrsnlDetailsRequest" xmlns:bons5="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdPrsnlDetailsResponse" xmlns:bons6="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdPCMRequest" xmlns:bons7="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdPCMResponse" xmlns:bons8="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdAddrDetailsReq" xmlns:bons9="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CMECEPortalUpdEmplymntDetailsRequest" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdateClientDetailsWebService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CMECUpdateClientDetailsWebService" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdateClientDetailsWebService">
+  <wsdl:types>
+    <xsd:schema xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdateClientDetailsWebService" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdateClientDetailsWebService">
+            <xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdLoginStatusResponse" schemaLocation="../../../bo/esb/eportal/CmecEPortalUpdLoginStatusResponse.xsd"/>
+            <xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdLoginStatusRequest" schemaLocation="../../../bo/esb/eportal/CmecEPortalUpdLoginStatusRequest.xsd"/>
+            <xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdPINResponse" schemaLocation="../../../bo/esb/eportal/CmecEPortalUpdPINResponse.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdPINRequest" schemaLocation="../../../bo/esb/eportal/CmecEPortalUpdPINRequest.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdateMOPResponse" schemaLocation="../../../bo/esb/eportal/CmecEPortalUpdateMOPResponse.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdateMOPRequest" schemaLocation="../../../bo/esb/eportal/CmecEPortalUpdateMOPRequest.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CMECEPortalUpdEmplymntDetailsResponse" schemaLocation="../../../bo/esb/eportal/CMECEPortalUpdEmplymntDetailsResponse.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CMECEPortalUpdEmplymntDetailsRequest" schemaLocation="../../../bo/esb/eportal/CMECEPortalUpdEmplymntDetailsRequest.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdAddrDetailsResp" schemaLocation="../../../bo/esb/eportal/CmecEPortalUpdAddrDetailsResp.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdAddrDetailsReq" schemaLocation="../../../bo/esb/eportal/CmecEPortalUpdAddrDetailsReq.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdPCMResponse" schemaLocation="../../../bo/esb/eportal/CmecEPortalUpdPCMResponse.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdPCMRequest" schemaLocation="../../../bo/esb/eportal/CmecEPortalUpdPCMRequest.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdPrsnlDetailsResponse" schemaLocation="../../../bo/esb/eportal/CmecEPortalUpdPrsnlDetailsResponse.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdPrsnlDetailsRequest" schemaLocation="../../../bo/esb/eportal/CmecEPortalUpdPrsnlDetailsRequest.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdCntctDetailsResponse" schemaLocation="../../../bo/esb/eportal/CmecEPortalUpdCntctDetailsResponse.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalUpdCntctDetailsRequest" schemaLocation="../../../bo/esb/eportal/CmecEPortalUpdCntctDetailsRequest.xsd"/>
+			<xsd:element name="updateContactDetails">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="UpdateContactDetailsReq" type="bons1:CmecEPortalUpdCntctDetailsRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="updateContactDetailsResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="UpdateContactDetailsResp" type="bons2:CmecEPortalUpdCntctDetailsResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="UpdatePersonalDetailsParameters" type="bons4:CmecEPortalUpdPrsnlDetailsRequest">
+			</xsd:element>
+			<xsd:element name="UpdatePersonalDetailsResponse" type="bons5:CmecEPortalUpdPrsnlDetailsResponse">
+			</xsd:element>
+			<xsd:element name="updatePreferredContactMethod">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="UpdatePreferredContactMethodreq" nillable="true" type="bons6:CmecEPortalUpdPCMRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="updatePreferredContactMethodResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="UpdatePreferredContactMethodResp" nillable="true" type="bons7:CmecEPortalUpdPCMResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="updateAddressDetails">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="UpdateAddressDetailsReq" nillable="true" type="bons8:CmecEPortalUpdAddrDetailsReq"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="updateAddressDetailsResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="UpdateAddressDetailsResp" nillable="true" type="bons3:CmecEPortalUpdAddrDetailsResp"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="updateEmploymentDetails">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="UpdateEmploymentDetailsReq" nillable="true" type="bons9:CMECEPortalUpdEmplymntDetailsRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="updateEmploymentDetailsResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="UpdateEmploymentDetailsResp" nillable="true" type="bons10:CMECEPortalUpdEmplymntDetailsResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="updateMOPDetails">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="UpdateMOPDetailsReq" nillable="true" type="bons11:CmecEPortalUpdateMOPRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="updateMOPDetailsResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="UpdateMOPDetailsResp" nillable="true" type="bons12:CmecEPortalUpdateMOPResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="updatePIN">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="UpdatePINReq" nillable="true" type="bons13:CmecEPortalUpdPINRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="updatePINResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="UpdatePINResp" nillable="true" type="bons14:CmecEPortalUpdPINResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+            <xsd:element name="updateLoginStatus">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="UpdateLoginStatusReq" nillable="true" type="bons16:CmecEPortalUpdLoginStatusRequest"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="updateLoginStatusResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="UpdateLoginStatusResp" nillable="true" type="bons17:CmecEPortalUpdLoginStatusResponse"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="updatePINResponseMsg">
+    <wsdl:part element="tns:updatePINResponse" name="updatePINResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePINRequestMsg">
+    <wsdl:part element="tns:updatePIN" name="updatePINParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateContactDetailsResponseMsg">
+    <wsdl:part element="tns:updateContactDetailsResponse" name="updateContactDetailsResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateEmploymentDetailsResponseMsg">
+    <wsdl:part element="tns:updateEmploymentDetailsResponse" name="updateEmploymentDetailsResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateMOPDetailsRequestMsg">
+    <wsdl:part element="tns:updateMOPDetails" name="updateMOPDetailsParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePersonalDetailsResponseMsg">
+    <wsdl:part element="tns:UpdatePersonalDetailsResponse" name="UpdatePersonalDetailsResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateAddressDetailsRequestMsg">
+    <wsdl:part element="tns:updateAddressDetails" name="updateAddressDetailsParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateAddressDetailsResponseMsg">
+    <wsdl:part element="tns:updateAddressDetailsResponse" name="updateAddressDetailsResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateLoginStatusRequestMsg">
+    <wsdl:part element="tns:updateLoginStatus" name="updateLoginStatusParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePersonalDetailsRequestMsg">
+    <wsdl:part element="tns:UpdatePersonalDetailsParameters" name="UpdatePersonalDetailsParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateMOPDetailsResponseMsg">
+    <wsdl:part element="tns:updateMOPDetailsResponse" name="updateMOPDetailsResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateLoginStatusResponseMsg">
+    <wsdl:part element="tns:updateLoginStatusResponse" name="updateLoginStatusResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePreferredContactMethodRequestMsg">
+    <wsdl:part element="tns:updatePreferredContactMethod" name="updatePreferredContactMethodParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePreferredContactMethodResponseMsg">
+    <wsdl:part element="tns:updatePreferredContactMethodResponse" name="updatePreferredContactMethodResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateEmploymentDetailsRequestMsg">
+    <wsdl:part element="tns:updateEmploymentDetails" name="updateEmploymentDetailsParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateContactDetailsRequestMsg">
+    <wsdl:part element="tns:updateContactDetails" name="updateContactDetailsParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CMECUpdateClientDetailsWebService">
+    <wsdl:operation name="updateContactDetails">
+      <wsdl:input message="tns:updateContactDetailsRequestMsg" name="updateContactDetailsRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updateContactDetailsResponseMsg" name="updateContactDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePersonalDetails">
+      <wsdl:input message="tns:updatePersonalDetailsRequestMsg" name="updatePersonalDetailsRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updatePersonalDetailsResponseMsg" name="updatePersonalDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePreferredContactMethod">
+      <wsdl:input message="tns:updatePreferredContactMethodRequestMsg" name="updatePreferredContactMethodRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updatePreferredContactMethodResponseMsg" name="updatePreferredContactMethodResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAddressDetails">
+      <wsdl:input message="tns:updateAddressDetailsRequestMsg" name="updateAddressDetailsRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updateAddressDetailsResponseMsg" name="updateAddressDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEmploymentDetails">
+      <wsdl:input message="tns:updateEmploymentDetailsRequestMsg" name="updateEmploymentDetailsRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updateEmploymentDetailsResponseMsg" name="updateEmploymentDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMOPDetails">
+      <wsdl:input message="tns:updateMOPDetailsRequestMsg" name="updateMOPDetailsRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updateMOPDetailsResponseMsg" name="updateMOPDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePIN">
+      <wsdl:input message="tns:updatePINRequestMsg" name="updatePINRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updatePINResponseMsg" name="updatePINResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLoginStatus">
+      <wsdl:input message="tns:updateLoginStatusRequestMsg" name="updateLoginStatusRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updateLoginStatusResponseMsg" name="updateLoginStatusResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CMECUpdateClientDetailsWebServiceSOAP" type="tns:CMECUpdateClientDetailsWebService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="updateContactDetails">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdateClientDetailsWebService/updateContactDetails"/>
+      <wsdl:input name="updateContactDetailsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateContactDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePersonalDetails">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdateClientDetailsWebService/updatePersonalDetails"/>
+      <wsdl:input name="updatePersonalDetailsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updatePersonalDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePreferredContactMethod">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdateClientDetailsWebService/updatePreferredContactMethod"/>
+      <wsdl:input name="updatePreferredContactMethodRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updatePreferredContactMethodResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAddressDetails">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdateClientDetailsWebService/updateAddressDetails"/>
+      <wsdl:input name="updateAddressDetailsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateAddressDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEmploymentDetails">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdateClientDetailsWebService/updateEmploymentDetails"/>
+      <wsdl:input name="updateEmploymentDetailsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateEmploymentDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateMOPDetails">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdateClientDetailsWebService/updateMOPDetails"/>
+      <wsdl:input name="updateMOPDetailsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateMOPDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatePIN">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdateClientDetailsWebService/updatePIN"/>
+      <wsdl:input name="updatePINRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updatePINResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLoginStatus">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdateClientDetailsWebService/updateLoginStatus"/>
+      <wsdl:input name="updateLoginStatusRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateLoginStatusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CMECUpdateClientDetailsWebService">
+    <wsdl:port binding="tns:CMECUpdateClientDetailsWebServiceSOAP" name="CMECUpdateClientDetailsWebServiceExport">
+      <soap:address location="http://localhost:8989/testSOAP/services/CMECUpdateClientDetailsWebServiceExport"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

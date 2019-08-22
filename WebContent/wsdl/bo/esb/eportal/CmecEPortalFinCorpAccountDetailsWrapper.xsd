@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalFinCorpAccountDetails" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/ListOfCmecEPortalFinCorpAccountDetails">
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalFinCorpAccountDetails" schemaLocation="CmecEPortalFinCorpAccountDetails.xsd">
+	</xsd:import>
+	<xsd:complexType name="CmecEPortalFinCorpAccountDetailsWrapper">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="FinCorpAccntDtls" type="bons0:CmecEPortalFinCorpAccountDetails">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

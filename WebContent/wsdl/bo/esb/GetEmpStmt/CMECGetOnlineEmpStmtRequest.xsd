@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/CMECGetOnlineEmpStmtRequest">
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd" schemaLocation="../../common/CMECHeader.xsd">
+	</xsd:import>
+	<xsd:complexType name="CMECGetOnlineEmpStmtRequest">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="RequestHeader" type="bons0:CMECHeader">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="accountId" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="listFromDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="listToDate" type="xsd:string">
+			</xsd:element>
+
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

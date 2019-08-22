@@ -1,0 +1,89 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from CMECInquireDEOSchdDiffWebservice WSDL service -->
+
+  <service name="CMECInquireDEOSchdDiffWebservice" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECInquireDEOSchdDiffWebservice"/>
+      <parameter name="wsdlServiceElement" value="CMECInquireDEOSchdDiffWebservice"/>
+      <parameter name="schemaUnqualified" value="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECInqDEODiffRequest,http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECInquireDEOSchdDiffWebservice,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECInqDEODiffResponse"/>
+      <parameter name="wsdlServicePort" value="CMECInquireDEOSchdDiffWebservice"/>
+      <parameter name="className" value="uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECInquireDEOSchdDiffWebservice.CMECInquireDEOSchdDiffWebserviceSOAPSkeleton"/>
+      <parameter name="wsdlPortType" value="CMECInquireDEOSchdDiffWebservice"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <arrayMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECInqDEODiffResponse"
+        qname="ns:InqDEODiffDetailsCollection"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.deoSchedule.CMECInqDEODiffResponse.InqDEODiffDetails[]"
+        innerType="cmp-ns:InqDEODiffDetails" xmlns:cmp-ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECInqDEODiffResponse"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECInqDEODiffResponse"
+        qname="ns:InqDEODiffDetails"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.deoSchedule.CMECInqDEODiffResponse.InqDEODiffDetails"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECInqDEODiffResponse"
+        qname="ns:InqDEODiffResponse"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.deoSchedule.CMECInqDEODiffResponse.InqDEODiffResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd"
+        qname="ns:Response"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.Response"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd"
+        qname="ns:CMECHeader"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.CMECHeader_xsd.CMECHeader"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd"
+        qname="ns:>Response>responseDetails"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.ResponseResponseDetails"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECInqDEODiffResponse"
+        qname="ns:CMECInqDEODiffResponse"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.deoSchedule.CMECInqDEODiffResponse.CMECInqDEODiffResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECInqDEODiffRequest"
+        qname="ns:CMECInqDEODiffRequest"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.deoSchedule.CMECInqDEODiffRequest.CMECInqDEODiffRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

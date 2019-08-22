@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecAddDelEmplyrAddrRequest" xmlns:bons2="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecUpdEmplyrAddrRequest" xmlns:bons3="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecUpdEmplyrResponse" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdEmplyrAddressWebService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CMECUpdEmplyrAddressWebService" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdEmplyrAddressWebService">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdEmplyrAddressWebService">
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecUpdEmplyrResponse" schemaLocation="../../../bo/esb/eportal/CmecUpdEmplyrResponse.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecUpdEmplyrAddrRequest" schemaLocation="../../../bo/esb/eportal/CmecUpdEmplyrAddrRequest.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecAddDelEmplyrAddrRequest" schemaLocation="../../../bo/esb/eportal/CmecAddDelEmplyrAddrRequest.xsd"/>
+			<xsd:element name="addEmployerAddress">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="addEmplyrAddrRequest" type="bons1:CmecAddDelEmplyrAddrRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="addEmployerAddressResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="addEmplyrAddrResponse" type="bons3:CmecUpdEmplyrResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="updateEmployerAddress">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="updEmplyrAddrRequest" nillable="true" type="bons2:CmecUpdEmplyrAddrRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="updateEmployerAddressResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="updEmplyrAddrResponse" nillable="true" type="bons3:CmecUpdEmplyrResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="deleteEmployerAddress">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="delEmplyrAddrRequest" nillable="true" type="bons1:CmecAddDelEmplyrAddrRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="deleteEmployerAddressResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="delEmplyrAddrResponse" nillable="true" type="bons3:CmecUpdEmplyrResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="updateEmployerAddressResponseMsg">
+    <wsdl:part element="tns:updateEmployerAddressResponse" name="updateEmployerAddressResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteEmployerAddressRequestMsg">
+    <wsdl:part element="tns:deleteEmployerAddress" name="deleteEmployerAddressParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteEmployerAddressResponseMsg">
+    <wsdl:part element="tns:deleteEmployerAddressResponse" name="deleteEmployerAddressResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addEmployerAddressResponseMsg">
+    <wsdl:part element="tns:addEmployerAddressResponse" name="addEmployerAddressResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateEmployerAddressRequestMsg">
+    <wsdl:part element="tns:updateEmployerAddress" name="updateEmployerAddressParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addEmployerAddressRequestMsg">
+    <wsdl:part element="tns:addEmployerAddress" name="addEmployerAddressParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CMECUpdEmplyrAddressWebService">
+    <wsdl:operation name="addEmployerAddress">
+      <wsdl:input message="tns:addEmployerAddressRequestMsg" name="addEmployerAddressRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:addEmployerAddressResponseMsg" name="addEmployerAddressResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEmployerAddress">
+      <wsdl:input message="tns:updateEmployerAddressRequestMsg" name="updateEmployerAddressRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updateEmployerAddressResponseMsg" name="updateEmployerAddressResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEmployerAddress">
+      <wsdl:input message="tns:deleteEmployerAddressRequestMsg" name="deleteEmployerAddressRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteEmployerAddressResponseMsg" name="deleteEmployerAddressResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CMECUpdEmplyrAddressWebServiceSOAP" type="tns:CMECUpdEmplyrAddressWebService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addEmployerAddress">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdEmplyrAddressWebService/addEmployerAddress"/>
+      <wsdl:input>
+        <soap:body parts="addEmployerAddressParameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="addEmployerAddressResult" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEmployerAddress">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdEmplyrAddressWebService/updateEmployerAddress"/>
+      <wsdl:input>
+        <soap:body parts="updateEmployerAddressParameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="updateEmployerAddressResult" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEmployerAddress">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdEmplyrAddressWebService/deleteEmployerAddress"/>
+      <wsdl:input>
+        <soap:body parts="deleteEmployerAddressParameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="deleteEmployerAddressResult" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CMECUpdEmplyrAddressWebService">
+    <wsdl:port binding="tns:CMECUpdEmplyrAddressWebServiceSOAP" name="CMECUpdEmplyrAddressWebService">
+      <soap:address location="http://localhost:8989/testSOAP/services/CMECUpdEmplyrAddressWebService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECFetchTemplateDEORequest" xmlns:bons2="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECFetchTemplateDEOResponse" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECFetchDEOTemplateWebservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CMECFetchDEOTemplateWebservice" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECFetchDEOTemplateWebservice">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECFetchDEOTemplateWebservice">
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECFetchTemplateDEOResponse" schemaLocation="../../../bo/esb/deoSchedule/CMECFetchTemplateDEOResponse.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECFetchTemplateDEORequest" schemaLocation="../../../bo/esb/deoSchedule/CMECFetchTemplateDEORequest.xsd"/>
+			<xsd:element name="FetchDEOTemplate">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="fetchDEOTemplateInput" nillable="true" type="bons1:CMECFetchTemplateDEORequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="FetchDEOTemplateResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="fetchDEOTemplateOutput" nillable="true" type="bons2:CMECFetchTemplateDEOResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="FetchDEOTemplateRequestMsg">
+    <wsdl:part element="tns:FetchDEOTemplate" name="FetchDEOTemplateParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="FetchDEOTemplateResponseMsg">
+    <wsdl:part element="tns:FetchDEOTemplateResponse" name="FetchDEOTemplateResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CMECFetchDEOTemplateWebservice">
+    <wsdl:operation name="FetchDEOTemplate">
+      <wsdl:input message="tns:FetchDEOTemplateRequestMsg" name="FetchDEOTemplateRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:FetchDEOTemplateResponseMsg" name="FetchDEOTemplateResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CMECFetchDEOTemplateWebserviceSOAP" type="tns:CMECFetchDEOTemplateWebservice">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="FetchDEOTemplate">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECFetchDEOTemplateWebservice/FetchDEOTemplate"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CMECFetchDEOTemplateWebservice">
+    <wsdl:port binding="tns:CMECFetchDEOTemplateWebserviceSOAP" name="CMECFetchDEOTemplateWebservice">
+      <soap:address location="http://localhost:8989/testSOAP/services/CMECFetchDEOTemplateWebservice"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

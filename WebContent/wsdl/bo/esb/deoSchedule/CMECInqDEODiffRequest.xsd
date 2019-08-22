@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECInqDEODiffRequest">
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd" schemaLocation="../../common/CMECHeader.xsd">
+	</xsd:import>
+	<xsd:complexType name="CMECInqDEODiffRequest">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="RequestHeader" type="bons0:CMECHeader">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AccNum" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FrmDt" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="ToDt" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="SchdId" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

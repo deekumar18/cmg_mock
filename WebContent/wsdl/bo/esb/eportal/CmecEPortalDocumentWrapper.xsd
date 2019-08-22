@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalDocumentDetails" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalDocumentWrapper">
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalDocumentDetails" schemaLocation="CmecEPortalDocumentDetails.xsd">
+	</xsd:import>
+	<xsd:complexType name="CmecEPortalDocumentWrapper">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="Documents" type="bons0:CmecEPortalDocumentDetails">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

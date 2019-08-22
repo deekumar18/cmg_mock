@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd" xmlns:bons2="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/ListOfCmecEPortalFinCorpAccountDetails" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecRtrvAccountDetailsResponse">
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/ListOfCmecEPortalFinCorpAccountDetails" schemaLocation="CmecEPortalFinCorpAccountDetailsWrapper.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd" schemaLocation="../../common/Response.xsd">
+	</xsd:import>
+	<xsd:complexType name="CmecRtrvAccountDetailsResponse">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="ResponseHeader" type="bons0:Response">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FinCorpAccntDtls" type="bons2:CmecEPortalFinCorpAccountDetailsWrapper">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd" xmlns:bons2="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalEmployerDtlsWrapper" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CMECSearchEmployerResponse">
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalEmployerDtlsWrapper" schemaLocation="CmecEPortalEmployerDtlsWrapper.xsd">
+	</xsd:import>
+
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd" schemaLocation="../../common/Response.xsd">
+	</xsd:import>
+	<xsd:complexType name="CMECSearchEmployerResponse">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="ResponseHeader" type="bons0:Response">
+			</xsd:element>
+
+
+
+			<xsd:element minOccurs="0" name="SearchedEmployerDtls" type="bons2:CmecEPortalEmployerDtlsWrapper">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

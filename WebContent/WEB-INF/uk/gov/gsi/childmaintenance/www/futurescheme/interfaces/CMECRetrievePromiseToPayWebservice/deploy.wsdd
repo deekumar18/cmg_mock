@@ -1,0 +1,81 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from CMECRetrievePromiseToPayWebservice WSDL service -->
+
+  <service name="CMECRetrievePromiseToPayWebservice" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECRetrievePromiseToPayWebservice"/>
+      <parameter name="wsdlServiceElement" value="CMECRetrievePromiseToPayWebservice"/>
+      <parameter name="schemaUnqualified" value="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/maintenance/CmecRetrievePromiseToPaySchdResponse,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/maintenance/CMECRetrievePromiseToPaySchdRequest,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/maintenance/CmecCollectionSchdDetails,http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECRetrievePromiseToPayWebservice,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd"/>
+      <parameter name="wsdlServicePort" value="CMECRetrievePromiseToPayWebservice"/>
+      <parameter name="className" value="uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECRetrievePromiseToPayWebservice.CMECRetrievePromiseToPayWebserviceSOAPSkeleton"/>
+      <parameter name="wsdlPortType" value="CMECRetrievePromiseToPayWebservice"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/maintenance/CMECRetrievePromiseToPaySchdRequest"
+        qname="ns:CmecRetrievePromiseToPaySchdRequest"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.maintenance.CMECRetrievePromiseToPaySchdRequest.CmecRetrievePromiseToPaySchdRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/maintenance/CmecRetrievePromiseToPaySchdResponse"
+        qname="ns:CmecRetrievePromiseToPaySchdResponse"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.maintenance.CmecRetrievePromiseToPaySchdResponse.CmecRetrievePromiseToPaySchdResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd"
+        qname="ns:Response"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.Response"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/maintenance/CmecRetrievePromiseToPaySchdResponse"
+        qname="ns:PromiseToPayScheduleDetailsCollection"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.maintenance.CmecCollectionSchdDetails.CmecPromiseToPaySchdDetails[]"
+        innerType="cmp-ns:CmecPromiseToPaySchdDetails" xmlns:cmp-ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/maintenance/CmecCollectionSchdDetails"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd"
+        qname="ns:CMECHeader"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.CMECHeader_xsd.CMECHeader"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd"
+        qname="ns:>Response>responseDetails"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.ResponseResponseDetails"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/maintenance/CmecCollectionSchdDetails"
+        qname="ns:CmecPromiseToPaySchdDetails"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.maintenance.CmecCollectionSchdDetails.CmecPromiseToPaySchdDetails"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

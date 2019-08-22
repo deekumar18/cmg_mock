@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd" xmlns:bons2="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CMECePortalRtvClientPmtHistory" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CMECePortalRtvClientPmtHisResponse">
+
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CMECePortalRtvClientPmtHistory" schemaLocation="CMECePortalRtvClientPmtHistory.xsd"/>
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd" schemaLocation="../../common/Response.xsd">
+	</xsd:import>
+	<xsd:complexType name="CMECePortalRtvClientPmtHisResponse">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="ResponseHeader" type="bons0:Response">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="StartDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EndDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="OpeningBal" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PaymentsDue" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PaymentsMade" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ChqReturned" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PendingWrtOff" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CompPayment" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ClosingBal" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ActvResArr" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SuspResArr" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="DeferResArr" type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="CollChrgApplied" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CollChrgPaid" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CollChrgRemaining" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CollChrgAutoSatisfied" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CollChrgSaved" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EnfChrg" type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="TotalArreasSusp" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="WrtnOffAmt" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="ClientPmtHistory" type="bons2:CMECePortalRtvClientPmtHistory">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
