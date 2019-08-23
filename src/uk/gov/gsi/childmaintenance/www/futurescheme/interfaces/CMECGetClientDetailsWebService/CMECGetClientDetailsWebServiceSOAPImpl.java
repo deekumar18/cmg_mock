@@ -81,6 +81,7 @@ public class CMECGetClientDetailsWebServiceSOAPImpl implements
 			clientAddress[j] = ePortalAdd;
 			j++;
 		}
+		
 		result.setClientAddress(clientAddress);
 		
 		
