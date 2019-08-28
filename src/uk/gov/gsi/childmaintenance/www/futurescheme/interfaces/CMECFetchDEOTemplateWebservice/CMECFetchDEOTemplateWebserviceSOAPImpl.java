@@ -7,9 +7,23 @@
 
 package uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECFetchDEOTemplateWebservice;
 
-public class CMECFetchDEOTemplateWebserviceSOAPImpl implements uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECFetchDEOTemplateWebservice.CMECFetchDEOTemplateWebservice_PortType{
-    public uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.deoSchedule.CMECFetchTemplateDEOResponse.CMECFetchTemplateDEOResponse fetchDEOTemplate(uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.deoSchedule.CMECFetchTemplateDEORequest.CMECFetchTemplateDEORequest fetchDEOTemplateInput) throws java.rmi.RemoteException {
-        return null;
-    }
+import uk.gov.dwp.esb.utils.CommonUtil;
+import uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.deoSchedule.CMECFetchDEODetailsResponse.FetchDEOResponse;
+import uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.deoSchedule.CMECFetchTemplateDEOResponse.CMECFetchTemplateDEOResponse;
+
+public class CMECFetchDEOTemplateWebserviceSOAPImpl implements
+		uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECFetchDEOTemplateWebservice.CMECFetchDEOTemplateWebservice_PortType {
+	public uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.deoSchedule.CMECFetchTemplateDEOResponse.CMECFetchTemplateDEOResponse fetchDEOTemplate(
+			uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.deoSchedule.CMECFetchTemplateDEORequest.CMECFetchTemplateDEORequest fetchDEOTemplateInput)
+			throws java.rmi.RemoteException {
+		return getCMECFetchTemplateDEOResponse();
+	}
+
+	private CMECFetchTemplateDEOResponse getCMECFetchTemplateDEOResponse() {
+		CMECFetchTemplateDEOResponse cmecFetchTemplateDEOResponse = new CMECFetchTemplateDEOResponse();
+		cmecFetchTemplateDEOResponse.setFetchDEOResponse(new FetchDEOResponse());
+		cmecFetchTemplateDEOResponse.setResponseHeader(CommonUtil.getResponse());
+		return cmecFetchTemplateDEOResponse;
+	}
 
 }
