@@ -15,8 +15,8 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 
-import fr.xebia.extras.selma.Selma;
-import uk.gov.dwp.esb.mappers.InquiryScheduleMapper;
+
+
 import uk.gov.dwp.esb.utils.DBUtil;
 import uk.gov.dwp.esb.vo.CMECInquireDEODetailsResponseVO;
 import uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.Response;
@@ -93,11 +93,5 @@ public class CMECInquireDEOScheduleWebserviceSOAPImpl implements
 		return res;
 	}
 
-	public static void main(String args[]) throws RemoteException {
-		InquiryScheduleMapper mapper = Selma.builder(InquiryScheduleMapper.class).build();
-
-		// Map my InBean
-		CMECInquireDEODetailsResponseVO res = mapper.getCMECInquireDEODetailsResponseVO(getCMECInquireDEODetailsResponse());
-		System.out.println(res);
-	}
+	
 }

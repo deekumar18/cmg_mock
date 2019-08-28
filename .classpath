@@ -18,7 +18,5 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/gson-2.8.5.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mongodb-driver-3.0.1.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mongodb-driver-core-3.0.1.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/selma-processor-1.0.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/selma-1.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
