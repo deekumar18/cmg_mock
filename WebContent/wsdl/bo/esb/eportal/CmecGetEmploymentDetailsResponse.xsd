@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd" xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalEmploymentDtlsWrapper" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmploymentDetailsResponse">
+    <xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalEmploymentDtlsWrapper" schemaLocation="CmecEPortalEmplymntDtlsWrapper.xsd"/>
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd" schemaLocation="../../common/Response.xsd">
+	</xsd:import>
+	<xsd:complexType name="CmecGetEmploymentDetailsResponse">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="ResponseHeader" type="bons0:Response">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TotalIncomeAmount" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CurrencyOfPayment" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ContactEmploymentDetails" type="bons1:CmecEPortalEmplymntDtlsWrapper">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

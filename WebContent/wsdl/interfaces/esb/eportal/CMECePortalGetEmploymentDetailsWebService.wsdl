@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECGetEmploymentDetailsWebService" xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmploymentDetailsRequest" xmlns:bons2="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmploymentDetailsResponse" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECePortalGetEmploymentDetailsWebService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CMECePortalGetEmploymentDetailsWebService" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECePortalGetEmploymentDetailsWebService">
+  <wsdl:types>
+    <xsd:schema xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECePortalGetEmploymentDetailsWebService" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECePortalGetEmploymentDetailsWebService">
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmploymentDetailsResponse" schemaLocation="../../../bo/esb/eportal/CmecGetEmploymentDetailsResponse.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmploymentDetailsRequest" schemaLocation="../../../bo/esb/eportal/CmecGetEmploymentDetailsRequest.xsd"/>
+			<xsd:element name="getEmploymentDetails">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getEmploymentDetailsInput" type="bons1:CmecGetEmploymentDetailsRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getEmploymentDetailsResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getEmploymentDetailsOutput" type="bons2:CmecGetEmploymentDetailsResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getEmploymentDetailsRequest">
+    <wsdl:part element="tns:getEmploymentDetails" name="getEmploymentDetailsParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEmploymentDetailsResponse">
+    <wsdl:part element="tns:getEmploymentDetailsResponse" name="getEmploymentDetailsResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CMECePortalGetEmploymentDetailsWebService">
+    <wsdl:operation name="getEmploymentDetails">
+      <wsdl:input message="tns:getEmploymentDetailsRequest" name="getEmploymentDetailsRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getEmploymentDetailsResponse" name="getEmploymentDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CMECGetEmploymentDetailsWebServiceSOAP" type="tns:CMECePortalGetEmploymentDetailsWebService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getEmploymentDetails">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECGetEmploymentDetailsWebService/NewOperation"/>
+      <wsdl:input>
+        <soap:body parts="getEmploymentDetailsParameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="getEmploymentDetailsResult" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CMECePortalGetEmploymentDetailsWebService">
+    <wsdl:port binding="tns:CMECGetEmploymentDetailsWebServiceSOAP" name="CMECePortalGetEmploymentDetailsWebService">
+      <soap:address location="http://localhost:8989/testSOAP/services/CMECePortalGetEmploymentDetailsWebService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

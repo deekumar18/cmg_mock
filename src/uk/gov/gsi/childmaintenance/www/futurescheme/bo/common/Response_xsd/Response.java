@@ -16,8 +16,6 @@ public class Response  implements java.io.Serializable {
 
     private java.lang.String SRNumber;
 
-    private java.lang.String acknowledgeDetails;
-
     public Response() {
     }
 
@@ -25,13 +23,11 @@ public class Response  implements java.io.Serializable {
            java.lang.Integer responseCode,
            java.lang.String responseMessage,
            uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.ResponseResponseDetails[] responseDetails,
-           java.lang.String SRNumber,
-           java.lang.String acknowledgeDetails) {
+           java.lang.String SRNumber) {
            this.responseCode = responseCode;
            this.responseMessage = responseMessage;
            this.responseDetails = responseDetails;
            this.SRNumber = SRNumber;
-           this.acknowledgeDetails = acknowledgeDetails;
     }
 
 
@@ -122,26 +118,6 @@ public class Response  implements java.io.Serializable {
         this.SRNumber = SRNumber;
     }
 
-
-    /**
-     * Gets the acknowledgeDetails value for this Response.
-     * 
-     * @return acknowledgeDetails
-     */
-    public java.lang.String getAcknowledgeDetails() {
-        return acknowledgeDetails;
-    }
-
-
-    /**
-     * Sets the acknowledgeDetails value for this Response.
-     * 
-     * @param acknowledgeDetails
-     */
-    public void setAcknowledgeDetails(java.lang.String acknowledgeDetails) {
-        this.acknowledgeDetails = acknowledgeDetails;
-    }
-
     private java.lang.Object __equalsCalc = null;
     public synchronized boolean equals(java.lang.Object obj) {
         if (!(obj instanceof Response)) return false;
@@ -165,10 +141,7 @@ public class Response  implements java.io.Serializable {
               java.util.Arrays.equals(this.responseDetails, other.getResponseDetails()))) &&
             ((this.SRNumber==null && other.getSRNumber()==null) || 
              (this.SRNumber!=null &&
-              this.SRNumber.equals(other.getSRNumber()))) &&
-            ((this.acknowledgeDetails==null && other.getAcknowledgeDetails()==null) || 
-             (this.acknowledgeDetails!=null &&
-              this.acknowledgeDetails.equals(other.getAcknowledgeDetails())));
+              this.SRNumber.equals(other.getSRNumber())));
         __equalsCalc = null;
         return _equals;
     }
@@ -199,9 +172,6 @@ public class Response  implements java.io.Serializable {
         }
         if (getSRNumber() != null) {
             _hashCode += getSRNumber().hashCode();
-        }
-        if (getAcknowledgeDetails() != null) {
-            _hashCode += getAcknowledgeDetails().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -238,13 +208,6 @@ public class Response  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("SRNumber");
         elemField.setXmlName(new javax.xml.namespace.QName("", "SRNumber"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
-        elemField.setMinOccurs(0);
-        elemField.setNillable(false);
-        typeDesc.addFieldDesc(elemField);
-        elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("acknowledgeDetails");
-        elemField.setXmlName(new javax.xml.namespace.QName("", "acknowledgeDetails"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);

@@ -138,29 +138,7 @@ public class CmecAddUpdEmplyrCntctRequest  implements java.io.Serializable {
         return _equals;
     }
 
-    private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getRequestHeader() != null) {
-            _hashCode += getRequestHeader().hashCode();
-        }
-        if (getErn() != null) {
-            _hashCode += getErn().hashCode();
-        }
-        if (getRowId() != null) {
-            _hashCode += getRowId().hashCode();
-        }
-        if (getEmployerContact() != null) {
-            _hashCode += getEmployerContact().hashCode();
-        }
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
-
+  
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
         new org.apache.axis.description.TypeDesc(CmecAddUpdEmplyrCntctRequest.class, true);

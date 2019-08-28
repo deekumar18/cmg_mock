@@ -15,8 +15,6 @@
 			</xsd:element>
 			<xsd:element minOccurs="0" name="SRNumber" type="xsd:string">
 			</xsd:element>
-			<xsd:element minOccurs="0" name="acknowledgeDetails" type="xsd:string">
-			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
 </xsd:schema>

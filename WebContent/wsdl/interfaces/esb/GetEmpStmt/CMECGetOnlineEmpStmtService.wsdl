@@ -20,12 +20,12 @@
 			</xsd:element>
 		</xsd:schema>
   </wsdl:types>
-  <wsdl:message name="getEmpStmtRequest">
-    <wsdl:part element="tns:getEmpStmtRequest" name="getEmpStmtParameters">
-    </wsdl:part>
-  </wsdl:message>
   <wsdl:message name="getEmpStmtResponse">
     <wsdl:part element="tns:getEmpStmtResponse" name="getEmpStmtResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEmpStmtRequest">
+    <wsdl:part element="tns:getEmpStmtRequest" name="getEmpStmtParameters">
     </wsdl:part>
   </wsdl:message>
   <wsdl:portType name="CMECGetOnlineEmpStmtService">
