@@ -15,6 +15,7 @@ import com.mongodb.DBObject;
 import com.mongodb.Mongo;
 import com.mongodb.util.JSON;
 
+import uk.gov.dwp.esb.utils.DBUtil;
 import uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.Response;
 import uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.ResponseResponseDetails;
 import uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecUpdEmplyrResponse.CmecUpdEmplyrResponse;
@@ -40,8 +41,7 @@ public class CMECUpdEmplyrCntctWebServiceSOAPImpl implements
 	}
 
 	private DBCollection getMongoDB() {
-		Mongo mongo = new Mongo("localhost", 27017);
-		DB db = mongo.getDB("cmg_mock");
+		DB db = DBUtil.getMongoDatabase();
 		DBCollection collection = db.getCollection("updemplyrcntctdetails");
 		return collection;
 	}

@@ -18,6 +18,7 @@ import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.MongoClient;
 
+import uk.gov.dwp.esb.utils.DBUtil;
 import uk.gov.dwp.esb.vo.ClientContactHistory;
 import uk.gov.dwp.esb.vo.CmecGetClientContactHistoryDetailsResponseVO;
 import uk.gov.dwp.esb.vo.ListOfDocument;
@@ -36,8 +37,7 @@ public class CMECGetClientContactHistoryWebServiceSOAPImpl implements
 
 		CmecGetClientContactHistoryDetailsResponse result = new CmecGetClientContactHistoryDetailsResponse();
 
-		MongoClient mongo = new MongoClient("localhost", 27017);
-		DB db = mongo.getDB("cmg_mock");
+		DB db = DBUtil.getMongoDatabase();
 		// mongo.getDatabase("cmg_mock");
 		DBCollection collection = db.getCollection("clientcontacthistory");
 		BasicDBObject criteria = new BasicDBObject();

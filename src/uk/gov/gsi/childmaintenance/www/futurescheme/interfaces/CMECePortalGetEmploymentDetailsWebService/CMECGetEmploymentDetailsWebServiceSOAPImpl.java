@@ -18,6 +18,7 @@ import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
 
+import uk.gov.dwp.esb.utils.DBUtil;
 import uk.gov.dwp.esb.vo.CmecGetEmploymentDetailsResponseVO;
 import uk.gov.dwp.esb.vo.ContactEmploymentDetail;
 import uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.Response;
@@ -33,8 +34,7 @@ public class CMECGetEmploymentDetailsWebServiceSOAPImpl implements
 
 		CmecGetEmploymentDetailsResponse result = new CmecGetEmploymentDetailsResponse();
 
-		Mongo mongo = new Mongo("localhost", 27017);
-		DB db = mongo.getDB("cmg_mock");
+		DB db = DBUtil.getMongoDatabase();
 		DBCollection collection = db.getCollection("employmentdetails");
 		BasicDBObject criteria = new BasicDBObject();
 		criteria.append("SCIN", getEmploymentDetailsInput.getSCIN());

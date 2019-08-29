@@ -18,6 +18,7 @@ import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
 
+import uk.gov.dwp.esb.utils.DBUtil;
 import uk.gov.dwp.esb.vo.CmecGetEmployerContactHistoryDetailsResponseVO;
 import uk.gov.dwp.esb.vo.EmployerContactHistory;
 import uk.gov.dwp.esb.vo.ListOfDocument;
@@ -35,8 +36,7 @@ public class CMECGetEmployerContactHistoryWebServiceSOAPImpl implements
 			throws java.rmi.RemoteException {
 		CmecGetEmployerContactHistoryDetailsResponse result = new CmecGetEmployerContactHistoryDetailsResponse();
 
-		Mongo mongo = new Mongo("localhost", 27017);
-		DB db = mongo.getDB("cmg_mock");
+		DB db = DBUtil.getMongoDatabase();
 		DBCollection collection = db.getCollection("employercontacthistory");
 		BasicDBObject criteria = new BasicDBObject();
 		criteria.append("ERN", getEmployerContactHistoryInput.getERN());

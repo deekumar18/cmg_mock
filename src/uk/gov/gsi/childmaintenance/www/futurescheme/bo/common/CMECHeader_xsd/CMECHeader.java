@@ -354,6 +354,52 @@ public class CMECHeader  implements java.io.Serializable {
         return _equals;
     }
 
+    private boolean __hashCodeCalc = false;
+    public synchronized int hashCode() {
+        if (__hashCodeCalc) {
+            return 0;
+        }
+        __hashCodeCalc = true;
+        int _hashCode = 1;
+        if (getServiceName() != null) {
+            _hashCode += getServiceName().hashCode();
+        }
+        if (getOperation() != null) {
+            _hashCode += getOperation().hashCode();
+        }
+        if (getReqSystemName() != null) {
+            _hashCode += getReqSystemName().hashCode();
+        }
+        if (getOriginatorID() != null) {
+            _hashCode += getOriginatorID().hashCode();
+        }
+        if (getOriginatorIP() != null) {
+            _hashCode += getOriginatorIP().hashCode();
+        }
+        if (getSourceObjectId() != null) {
+            _hashCode += getSourceObjectId().hashCode();
+        }
+        if (getBranchNumber() != null) {
+            _hashCode += getBranchNumber().hashCode();
+        }
+        if (getSeqNum() != null) {
+            _hashCode += getSeqNum().hashCode();
+        }
+        if (getTimeStamp() != null) {
+            _hashCode += getTimeStamp().hashCode();
+        }
+        if (getSensitiveAccessFlag() != null) {
+            _hashCode += getSensitiveAccessFlag().hashCode();
+        }
+        if (getHostName() != null) {
+            _hashCode += getHostName().hashCode();
+        }
+        if (getAutoCompleteFlag() != null) {
+            _hashCode += getAutoCompleteFlag().hashCode();
+        }
+        __hashCodeCalc = false;
+        return _hashCode;
+    }
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =

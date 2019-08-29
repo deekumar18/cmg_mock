@@ -16,6 +16,7 @@ import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
 
+import uk.gov.dwp.esb.utils.DBUtil;
 import uk.gov.dwp.esb.vo.AccountDetail;
 import uk.gov.dwp.esb.vo.BwzResponsesWrapper;
 import uk.gov.dwp.esb.vo.EmployerAddress;
@@ -40,8 +41,7 @@ public class CMECGetEmployerDetailsWebServiceSOAPImpl implements
 		CmecGetEmployerDetailsResponse result = new CmecGetEmployerDetailsResponse();
 		System.out.println(getEmployerDetailsInput.getEmployerReferenceNum());
 
-		Mongo mongo = new Mongo("localhost", 27017);
-		DB db = mongo.getDB("cmg_mock");
+		DB db = DBUtil.getMongoDatabase();
 		DBCollection collection = db.getCollection("employerdetails");
 		BasicDBObject criteria = new BasicDBObject();
 		criteria.append("employerDetails.employerRefNum", getEmployerDetailsInput.getEmployerReferenceNum());
