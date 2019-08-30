@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalEmployerDetails">
+
+	<xsd:complexType name="CmecEPortalEmployerDetails">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="Name" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="EmployerRefNum" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EmployerID" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PreferedCommunicationMethod" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ArmedForcesFlag" type="xsd:string">
+			</xsd:element>
+
+
+
+			<xsd:element minOccurs="0" name="EmailAddress" type="xsd:string">
+			</xsd:element>
+
+
+			<xsd:element minOccurs="0" name="ActionMode" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

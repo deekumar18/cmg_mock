@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECGetEmployerDetailsWebService" xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmployerDetailsRequest" xmlns:bons2="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmployerDetailsResponse" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECGetEmployerDetailsWebService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CMECePortalGetEmployerWebService" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECGetEmployerDetailsWebService">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECGetEmployerDetailsWebService">
+			
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmployerDetailsRequest" schemaLocation="../../../bo/esb/eportal/CmecGetEmployerDetailsRequest.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmployerDetailsResponse" schemaLocation="../../../bo/esb/eportal/CmecGetEmployerDetailsResponse.xsd"/>
+			<xsd:element name="getEmployerDetails">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getEmployerDetailsInput" nillable="true" type="bons1:CmecGetEmployerDetailsRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getEmployerDetailsResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getEmployerDetailsOutput" nillable="true" type="bons2:CmecGetEmployerDetailsResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>			
+		</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getEmployerDetailsResponseMsg">
+    <wsdl:part element="tns:getEmployerDetailsResponse" name="getEmployerDetailsResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEmployerDetailsRequestMsg">
+    <wsdl:part element="tns:getEmployerDetails" name="GetClientDetailsParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CMECePortalGetEmployerWebService">
+    <wsdl:operation name="getEmployerDetails">
+      <wsdl:input message="tns:getEmployerDetailsRequestMsg" name="getEmployerDetailsRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getEmployerDetailsResponseMsg" name="getEmployerDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CMECGetEmployerDetailsWebServiceSOAP" type="tns:CMECePortalGetEmployerWebService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getEmployerDetails">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECePortalGetEmployerWebServiceExport_CMECePortalGetEmployerWebServiceHttp_Service/GetEmployerDetails"/>
+      <wsdl:input name="getEmployerDetailsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getEmployerDetailsResponse">
+        <soap:body parts="getEmployerDetailsResult" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CMECePortalGetEmployerWebService">
+    <wsdl:port binding="tns:CMECGetEmployerDetailsWebServiceSOAP" name="CMECePortalGetEmployerWebService">
+      <soap:address location="http://localhost:8989/testSOAP/services/CMECePortalGetEmployerWebService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

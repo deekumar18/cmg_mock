@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd" version="1.0">
+	<xsd:complexType name="Response">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="responseCode" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="responseMessage" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="responseDetails">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element minOccurs="0" name="code" type="xsd:string"/>
+						<xsd:element minOccurs="0" name="description" type="xsd:string"/>
+						<xsd:element minOccurs="0" name="responseFrom" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SRNumber" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

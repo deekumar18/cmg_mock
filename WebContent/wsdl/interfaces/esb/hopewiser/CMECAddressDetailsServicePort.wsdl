@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECAddressDetailsService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/asbo/address/GetAddressDetailsRequest" xmlns:xsd2="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/asbo/address/GetAddressDetailsResponse" name="CMECAddressDetails" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECAddressDetailsService">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECAddressDetailsService">
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/asbo/address/GetAddressDetailsRequest" schemaLocation="../../../bo/esb/hopewiser/GetAddressDetailsRequest.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/asbo/address/GetAddressDetailsResponse" schemaLocation="../../../bo/esb/hopewiser/GetAddressDetailsResponse.xsd"/>
+			<xsd:element name="GetAddressDetails">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getAddressDetailsInput" nillable="true" type="xsd1:GetAddressDetailsRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="GetAddressDetailsResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="getAddressDetailsOutput" nillable="true" type="xsd2:GetAddressDetailsResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getAddressDetailsRequest">
+    <wsdl:part element="tns:GetAddressDetails" name="getAddressDetailsRequest">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAddressDetailsResponse">
+    <wsdl:part element="tns:GetAddressDetailsResponse" name="getAddressDetailsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CMECAddressDetails">
+    <wsdl:operation name="getAddressDetails">
+      <wsdl:input message="tns:getAddressDetailsRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:getAddressDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CMECAddressDetailsBinding" type="tns:CMECAddressDetails">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getAddressDetails">
+      <soap:operation soapAction="http://www.example.org/CMECAddressDetails/getAddressDetails"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CMECAddressDetailsService">
+    <wsdl:port binding="tns:CMECAddressDetailsBinding" name="CMECAddressDetailsServicePort">
+      <soap:address location="http://localhost:8989/testSOAP/services/CMECAddressDetailsServicePort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
