@@ -64,7 +64,7 @@ public class CMECInquireDEOScheduleWebserviceSOAPImpl implements
 		em.setOverDraftAmount("test");
 		em.setReasonCode("test");
 		em.setScheduleDate("test");
-		em.setScheduleId("test");
+		em.setScheduleId("000000000994");
 		em.setScheduleStatus("test");
 		em.setTargetAmount("test");
 		em.setToDate("test");
@@ -85,7 +85,7 @@ public class CMECInquireDEOScheduleWebserviceSOAPImpl implements
 		res.setResponseMessage("Success");
 		ResponseResponseDetails rd = new ResponseResponseDetails();
 		rd.setCode("200");
-		rd.setDescription("test");
+		rd.setDescription("O.K.");
 		rd.setResponseFrom("test");
 		ResponseResponseDetails[] r = new ResponseResponseDetails[1];
 		r[0] = rd;
