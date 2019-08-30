@@ -1,14 +1,31 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
+=======
 encoding//src/CMECLibraryR6/uk/gov/futurescheme/cmec/bo/esb/correspondence/RetrieveDocumentResponse/RetrieveDocumentResponse.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/CMECGetOnlineEmpStmtRequest/CMECGetOnlineEmpStmtRequest.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/CMECGetOnlineEmpStmtResponse/CMECGetOnlineEmpStmtResponse.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/EmpStmtDetails/EmpStmtDetails.java=UTF-8
+>>>>>>> d7c2d3d9a022920211eca07cd940241f72f2d557
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/asbo/address/Address/Address.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/asbo/address/GetAddressDetailsRequest/GetAddressDetailsRequest.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/asbo/address/GetAddressDetailsResponse/GetAddressDetailsResponse.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/common/CMECHeader_xsd/CMECHeader.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/common/Response_xsd/Response.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/common/Response_xsd/ResponseResponseDetails.java=UTF-8
+<<<<<<< HEAD
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/eportal/CmecEPortalAccountDetails/CmecEPortalAccountDetails.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/eportal/CmecEPortalAddress/CmecEPortalAddress.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/eportal/CmecEPortalCaseContactDetails/CmecEPortalCaseContactDetails.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/eportal/CmecEPortalContactDetails/CmecEPortalContactDetails.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/eportal/CmecEPortalEmployerDetails/CmecEPortalEmployerDetails.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/eportal/CmecEPortalFinCorpAccountDetails/CmecEPortalFinCorpAccountDetails.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/eportal/CmecEPortalHLSCaseDetails/CmecEPortalHLSCaseDetails.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/eportal/CmecGetClientDetailsRequest/CmecGetClientDetailsRequest.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/eportal/CmecGetClientDetailsResponse/CmecGetClientDetailsResponse.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/eportal/CmecGetEmployerDetailsRequest/CmecGetEmployerDetailsRequest.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/eportal/CmecGetEmployerDetailsResponse/CmecGetEmployerDetailsResponse.java=UTF-8
+encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/payment/BankWizardResponseDetail/BankWizardResponseDetail.java=UTF-8
+=======
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/correspondence/RetrieveDocumentRequest/RetrieveDocumentRequest.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/deoSchedule/CMECFetchDEODetailsRequest/CMECFetchDEODetailsRequest.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/deoSchedule/CMECFetchDEODetailsResponse/CMECFetchDEODetailsResponse.java=UTF-8
@@ -87,6 +104,7 @@ encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/payment/CmecSu
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/payment/CmecSubmitBankValidationResponse/CmecSubmitBankValidationResponse.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/esb/payment/CmecSubmitBankValidationResponse/Response.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/bo/gbo/correspondence/Content_xsd/Content.java=UTF-8
+>>>>>>> d7c2d3d9a022920211eca07cd940241f72f2d557
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECAddressDetailsService/CMECAddressDetails.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECAddressDetailsService/CMECAddressDetailsBindingImpl.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECAddressDetailsService/CMECAddressDetailsBindingSkeleton.java=UTF-8
@@ -95,6 +113,8 @@ encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECAddres
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECAddressDetailsService/CMECAddressDetailsServiceLocator.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECAddressDetailsService/GetAddressDetails.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECAddressDetailsService/GetAddressDetailsResponse.java=UTF-8
+<<<<<<< HEAD
+=======
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECBankWizardWebservice/CMECBankWizardWebservice_BindingImpl.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECBankWizardWebservice/CMECBankWizardWebservice_BindingSkeleton.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECBankWizardWebservice/CMECBankWizardWebservice_BindingStub.java=UTF-8
@@ -119,6 +139,7 @@ encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECFetchD
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECFetchDEOTemplateWebservice/CMECFetchDEOTemplateWebservice_PortType.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECFetchDEOTemplateWebservice/CMECFetchDEOTemplateWebservice_Service.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECFetchDEOTemplateWebservice/CMECFetchDEOTemplateWebservice_ServiceLocator.java=UTF-8
+>>>>>>> d7c2d3d9a022920211eca07cd940241f72f2d557
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECGetClientDetailsWebService/CMECGetClientDetailsWebServiceSOAPImpl.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECGetClientDetailsWebService/CMECGetClientDetailsWebServiceSOAPSkeleton.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECGetClientDetailsWebService/CMECGetClientDetailsWebServiceSOAPStub.java=UTF-8
@@ -131,6 +152,8 @@ encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECGetEmp
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECGetEmployerDetailsWebService/CMECePortalGetEmployerWebService_PortType.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECGetEmployerDetailsWebService/CMECePortalGetEmployerWebService_Service.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECGetEmployerDetailsWebService/CMECePortalGetEmployerWebService_ServiceLocator.java=UTF-8
+<<<<<<< HEAD
+=======
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECGetOnlineEmpStmtService/CMECGetOnlineEmpStmtServiceSOAPImpl.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECGetOnlineEmpStmtService/CMECGetOnlineEmpStmtServiceSOAPSkeleton.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECGetOnlineEmpStmtService/CMECGetOnlineEmpStmtServiceSOAPStub.java=UTF-8
@@ -223,3 +246,4 @@ encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECePorta
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECePortalUpdEmplyrWebService/CMECePortalUpdEmplyrWebService_PortType.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECePortalUpdEmplyrWebService/CMECePortalUpdEmplyrWebService_Service.java=UTF-8
 encoding//src/uk/gov/gsi/childmaintenance/www/futurescheme/interfaces/CMECePortalUpdEmplyrWebService/CMECePortalUpdEmplyrWebService_ServiceLocator.java=UTF-8
+>>>>>>> d7c2d3d9a022920211eca07cd940241f72f2d557

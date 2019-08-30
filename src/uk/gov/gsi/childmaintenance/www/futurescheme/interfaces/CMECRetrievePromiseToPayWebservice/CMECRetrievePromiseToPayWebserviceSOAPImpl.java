@@ -23,21 +23,21 @@ public class CMECRetrievePromiseToPayWebserviceSOAPImpl implements
 
 	private static CmecRetrievePromiseToPaySchdResponse getCmecRetrievePromiseToPaySchdResponse() {
 		CmecRetrievePromiseToPaySchdResponse cmecRetrievePromiseToPaySchdResponse = new CmecRetrievePromiseToPaySchdResponse();
-		cmecRetrievePromiseToPaySchdResponse.setNrpAccountNumber("test");
+		cmecRetrievePromiseToPaySchdResponse.setNrpAccountNumber("3000755450");
 		CmecPromiseToPaySchdDetails[] cmeDetails = new CmecPromiseToPaySchdDetails[1];
 
 		CmecPromiseToPaySchdDetails cmecPromiseToPaySchdDetails = new CmecPromiseToPaySchdDetails();
-		cmecPromiseToPaySchdDetails.setAmountDue("test");
-		cmecPromiseToPaySchdDetails.setAmountReceived("test");
-		cmecPromiseToPaySchdDetails.setCollectionDate("test");
-		cmecPromiseToPaySchdDetails.setMopId("test");
-		cmecPromiseToPaySchdDetails.setMopType("test");
-		cmecPromiseToPaySchdDetails.setNegoAcceptFlag("test");
+		cmecPromiseToPaySchdDetails.setAmountDue("35.84");
+		cmecPromiseToPaySchdDetails.setAmountReceived("0.00");
+		cmecPromiseToPaySchdDetails.setCollectionDate("08/19/2019");
+		cmecPromiseToPaySchdDetails.setMopId("1");
+		cmecPromiseToPaySchdDetails.setMopType("BHOCA");
+		cmecPromiseToPaySchdDetails.setNegoAcceptFlag("N");
 		cmecPromiseToPaySchdDetails.setPwcAccountNumber("test");
-		cmecPromiseToPaySchdDetails.setRefId("test");
-		cmecPromiseToPaySchdDetails.setServiceType("test");
-		cmecPromiseToPaySchdDetails.setStatus("test");
-		cmecPromiseToPaySchdDetails.setVersionNumber("test");
+		cmecPromiseToPaySchdDetails.setRefId("999998641271");
+		cmecPromiseToPaySchdDetails.setServiceType("Calc and Collection");
+		cmecPromiseToPaySchdDetails.setStatus("Active");
+		cmecPromiseToPaySchdDetails.setVersionNumber("1");
 		cmeDetails[0] = cmecPromiseToPaySchdDetails;
 
 		cmecRetrievePromiseToPaySchdResponse.setPromiseToPayScheduleDetailsCollection(cmeDetails);
