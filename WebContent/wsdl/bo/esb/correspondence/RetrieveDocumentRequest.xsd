@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/gbo/correspondence/Content.xsd" xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd" xmlns:tns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/correspondence/RetrieveDocumentRequest" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/correspondence/RetrieveDocumentRequest">
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd" schemaLocation="../../common/CMECHeader.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/gbo/correspondence/Content.xsd" schemaLocation="../../gbo/correspondence/Content.xsd">
+	</xsd:import>
+	<xsd:element name="retrieveDocumentRequest" type="tns:RetrieveDocumentRequest"/>
+	<xsd:complexType name="RetrieveDocumentRequest">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="requestHeader" type="bons1:CMECHeader">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="documentDetails" type="bons0:Content">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

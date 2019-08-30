@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/maintenance/CmecCollectionSchdDetails">
+	<xsd:complexType name="CmecPromiseToPaySchdDetails">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="refId" type="xsd:string"/>
+
+			<xsd:element minOccurs="0" name="mopId" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="mopType" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="collectionDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="amountDue" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="amountReceived" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="status" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="versionNumber" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="negoAcceptFlag" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="pwcAccountNumber" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="serviceType" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

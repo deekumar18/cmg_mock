@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalEnclosuresWrapper" xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalDocumentWrapper" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalClientContactHistDetails">
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalDocumentWrapper" schemaLocation="CmecEPortalDocumentWrapper.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalEnclosuresWrapper" schemaLocation="CmecEPortalEnclosuresWrapper.xsd">
+	</xsd:import>
+	<xsd:complexType name="CmecEPortalContactHistDetails">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="CaseId" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Subject" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="RefId" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="DateOfCorrespondence" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="LtrTmplCode" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="TypeOfCorrespondence" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ListOfDocuments" type="bons1:CmecEPortalDocumentWrapper">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="MessageFlag" type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="Description" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ListOfEnclosures" type="bons0:CmecEPortalEnclosuresWrapper">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ClientFacingName" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

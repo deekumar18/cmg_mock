@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECFetchDEODetailsRequest" xmlns:bons2="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECFetchDEODetailsResponse" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECFetchDEOScheduleWebservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CMECFetchDEOScheduleWebservice" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECFetchDEOScheduleWebservice">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECFetchDEOScheduleWebservice">
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECFetchDEODetailsRequest" schemaLocation="../../../bo/esb/deoSchedule/CMECFetchDEODetailsRequest.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECFetchDEODetailsResponse" schemaLocation="../../../bo/esb/deoSchedule/CMECFetchDEODetailsResponse.xsd"/>
+			<xsd:element name="FetchDEOSchedule">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="fetchDEOScheduleInput" nillable="true" type="bons1:CMECFetchDEODetailsRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="FetchDEOScheduleResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="fetchDEOScheduleOutput" nillable="true" type="bons2:CMECFetchDEODetailsResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="FetchDEOScheduleRequestMsg">
+    <wsdl:part element="tns:FetchDEOSchedule" name="FetchDEOScheduleParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="FetchDEOScheduleResponseMsg">
+    <wsdl:part element="tns:FetchDEOScheduleResponse" name="FetchDEOScheduleResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CMECFetchDEOScheduleWebservice">
+    <wsdl:operation name="FetchDEOSchedule">
+      <wsdl:input message="tns:FetchDEOScheduleRequestMsg" name="FetchDEOScheduleRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:FetchDEOScheduleResponseMsg" name="FetchDEOScheduleResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CMECFetchDEOScheduleWebserviceSOAP" type="tns:CMECFetchDEOScheduleWebservice">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="FetchDEOSchedule">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECFetchDEOScheduleWebservice/FetchDEOSchedule"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CMECFetchDEOScheduleWebservice">
+    <wsdl:port binding="tns:CMECFetchDEOScheduleWebserviceSOAP" name="CMECFetchDEOScheduleWebservice">
+      <soap:address location="http://localhost:8989/testSOAP/services/CMECFetchDEOScheduleWebservice"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

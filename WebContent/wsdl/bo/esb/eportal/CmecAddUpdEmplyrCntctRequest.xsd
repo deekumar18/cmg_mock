@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd" xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalContactDetails" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecAddUpdEmplyrCntctRequest">
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalContactDetails" schemaLocation="CmecEPortalContactDetails.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd" schemaLocation="../../common/CMECHeader.xsd">
+	</xsd:import>
+	<xsd:complexType name="CmecAddUpdEmplyrCntctRequest">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="requestHeader" type="bons0:CMECHeader">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ern" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="rowId" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="employerContact" type="bons1:CmecEPortalContactDetails">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

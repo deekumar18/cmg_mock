@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalAddress" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalEmploymentDetails">
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalAddress" schemaLocation="CmecEPortalAddress.xsd">
+	</xsd:import>
+	<xsd:complexType name="CmecEPortalEmploymentDetails">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="EmployerName" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="IncomeType" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="SpecialEmploymentType" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AnnualGrossIncome" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AnnualIrregularIncome" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AnnualPensionContribution" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ForeignExchangeCosts" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="PhoneNumber" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="FaxNumber" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EmployerId" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="ModifiedFlag" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="IncomeId" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EmploymentStartDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EmploymentEndDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="WorkPhoneNumExtn" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="AddressDetails" type="bons0:CmecEPortalAddress">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

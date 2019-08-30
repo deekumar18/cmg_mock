@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECRetrievePromiseToPayWebservice" xmlns:bons5="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/maintenance/CMECRetrievePromiseToPaySchdRequest" xmlns:bons6="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/maintenance/CmecRetrievePromiseToPaySchdResponse" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECRetrievePromiseToPayWebservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CMECRetrievePromiseToPayWebservice" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECRetrievePromiseToPayWebservice">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECRetrievePromiseToPayWebservice">
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/maintenance/CMECRetrievePromiseToPaySchdRequest" schemaLocation="../../../bo/esb/maintenance/CmecRetrievePromiseToPaySchdRequest.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/maintenance/CmecRetrievePromiseToPaySchdResponse" schemaLocation="../../../bo/esb/maintenance/CmecRetrievePromiseToPaySchdResponse.xsd"/>
+
+
+			<xsd:element name="RetrievePromiseToPaySchedule">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="retrievePromiseToPaySchdInput" nillable="true" type="bons5:CmecRetrievePromiseToPaySchdRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="RetrievePromiseToPayScheduleResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="retrievePromiseToPaySchdOutput" nillable="true" type="bons6:CmecRetrievePromiseToPaySchdResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+		</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="RetrievePromiseToPayScheduleRequestMsg">
+    <wsdl:part element="tns:RetrievePromiseToPaySchedule" name="RetrievePromiseToPayScheduleParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RetrievePromiseToPayScheduleResponseMsg">
+    <wsdl:part element="tns:RetrievePromiseToPayScheduleResponse" name="RetrievePromiseToPayScheduleResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CMECRetrievePromiseToPayWebservice">
+    <wsdl:operation name="RetrievePromiseToPaySchedule">
+      <wsdl:input message="tns:RetrievePromiseToPayScheduleRequestMsg" name="RetrievePromiseToPayScheduleRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:RetrievePromiseToPayScheduleResponseMsg" name="RetrievePromiseToPayScheduleResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CMECRetrievePromiseToPayWebserviceSOAP" type="tns:CMECRetrievePromiseToPayWebservice">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RetrievePromiseToPaySchedule">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECRetrievePromiseToPayWebservice/RetrievePromiseToPaySchedule"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CMECRetrievePromiseToPayWebservice">
+    <wsdl:port binding="tns:CMECRetrievePromiseToPayWebserviceSOAP" name="CMECRetrievePromiseToPayWebservice">
+      <soap:address location="http://localhost:8989/testSOAP/services/CMECRetrievePromiseToPayWebservice"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

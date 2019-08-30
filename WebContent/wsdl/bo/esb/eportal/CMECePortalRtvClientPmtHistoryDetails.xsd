@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CMECePortalRtvClientPmtHistoryDetails">
+	<xsd:complexType name="CMECePortalRtvClientPmtHistoryDetails">
+		<xsd:sequence>
+
+
+
+
+
+
+
+
+
+			<xsd:element minOccurs="0" name="TransactionDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="DebitAmt" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CreditAmt" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Description" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="Balance" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

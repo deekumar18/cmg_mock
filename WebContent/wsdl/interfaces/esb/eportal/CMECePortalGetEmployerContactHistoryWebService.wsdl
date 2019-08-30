@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECePortalGetEmployerContactHistoryWebServiceExport_CMECePortalGetEmployerContactHistoryWebServiceHttpPort/" xmlns:bons2="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmployerContactHistoryDetailsRequest" xmlns:bons3="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmployerContactHistoryDetailsResponse" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECePortalGetEmployerContactHistoryWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CMECePortalGetEmployerContactHistoryWebService" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECePortalGetEmployerContactHistoryWebService/">
+  <wsdl:types>
+    <xsd:schema xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECePortalGetEmployerContactHistoryWebService/" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECePortalGetEmployerContactHistoryWebService/">
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmployerContactHistoryDetailsResponse" schemaLocation="../../../bo/esb/eportal/CmecGetEmployerContactHistoryDetailsResponse.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmployerContactHistoryDetailsRequest" schemaLocation="../../../bo/esb/eportal/CmecGetEmployerContactHistoryDetailsRequest.xsd"/>
+			<xsd:element name="getEmployerContactHistory">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="GetEmployerContactHistoryInput" type="bons2:CmecGetEmployerContactHistoryDetailsRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="getEmployerContactHistoryResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="GetEmployerContactHistoryOutput" type="bons3:CmecGetEmployerContactHistoryDetailsResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+		</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getEmployerContactHistoryRequest">
+    <wsdl:part element="tns:getEmployerContactHistory" name="GetEmployerContactHistoryInput">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getEmployerContactHistoryResponse">
+    <wsdl:part element="tns:getEmployerContactHistoryResponse" name="GetEmployerContactHistoryOutput">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CMECePortalGetEmployerContactHistoryWebService">
+    <wsdl:operation name="getEmployerContactHistory">
+      <wsdl:input message="tns:getEmployerContactHistoryRequest" name="GetEmployerContactHistoryInput">
+    </wsdl:input>
+      <wsdl:output message="tns:getEmployerContactHistoryResponse" name="GetEmployerContactHistoryOutput">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CMECGetEmployerContactHistoryWebServiceSOAP" type="tns:CMECePortalGetEmployerContactHistoryWebService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getEmployerContactHistory">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECePortalGetEmployerContactHistoryWebService/getEmployerContactHistory"/>
+      <wsdl:input name="GetEmployerContactHistoryInput">
+        <soap:body parts="GetEmployerContactHistoryInput" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetEmployerContactHistoryOutput">
+        <soap:body parts="GetEmployerContactHistoryOutput" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CMECePortalGetEmployerContactHistoryWebService">
+    <wsdl:port binding="tns:CMECGetEmployerContactHistoryWebServiceSOAP" name="CMECePortalGetEmployerContactHistoryWebService">
+      <soap:address location="http://localhost:8989/testSOAP/services/CMECePortalGetEmployerContactHistoryWebService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

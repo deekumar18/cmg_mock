@@ -1,0 +1,66 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from CMECBankWizardWebservice WSDL service -->
+
+  <service name="CMECBankWizardWebservice" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECBankWizardWebservice"/>
+      <parameter name="wsdlServiceElement" value="CMECBankWizardWebservice"/>
+      <parameter name="schemaUnqualified" value="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/payment/BankWizardResponseDetail,http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECBankWizardWebservice,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/payment/CmecSubmitBankValidationResponse,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/payment/CmecSubmitBankValidationRequest"/>
+      <parameter name="wsdlServicePort" value="CMECBankWizardWebservice"/>
+      <parameter name="className" value="uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECBankWizardWebservice.CMECBankWizardWebservice_BindingSkeleton"/>
+      <parameter name="wsdlPortType" value="CMECBankWizardWebservice"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/payment/BankWizardResponseDetail"
+        qname="ns:BankWizardResponseDetail"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.payment.BankWizardResponseDetail.BankWizardResponseDetail"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd"
+        qname="ns:CMECHeader"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.CMECHeader_xsd.CMECHeader"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/payment/CmecSubmitBankValidationRequest"
+        qname="ns:CmecSubmitBankValidationRequest"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.payment.CmecSubmitBankValidationRequest.CmecSubmitBankValidationRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/payment/CmecSubmitBankValidationResponse"
+        qname="ns:Response"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.payment.CmecSubmitBankValidationResponse.Response"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/payment/CmecSubmitBankValidationResponse"
+        qname="ns:CmecSubmitBankValidationResponse"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.payment.CmecSubmitBankValidationResponse.CmecSubmitBankValidationResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

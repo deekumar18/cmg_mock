@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/AttachmentTemplate" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecAttachmentTemplateWrapper">
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/AttachmentTemplate" schemaLocation="AttachmentTemplate.xsd">
+	</xsd:import>
+	<xsd:complexType name="CmecAttachmentTemplateWrapper">
+		<xsd:sequence>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="AttachmentTemplate" type="bons0:AttachmentTemplate">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

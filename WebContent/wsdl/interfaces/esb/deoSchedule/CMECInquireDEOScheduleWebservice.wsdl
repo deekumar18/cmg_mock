@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECInquireDEOScheduleWebservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CMECInquireDEOScheduleWebservice" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECInquireDEOScheduleWebservice">
+  <wsdl:types>
+    <xsd:schema xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECInquireDEOScheduleWebservice" xmlns:bons3="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECInquireDEODetailsRequest" xmlns:bons4="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECInquireDEODetailsResponse" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECInquireDEOScheduleWebservice">
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECInquireDEODetailsResponse" schemaLocation="../../../bo/esb/deoSchedule/CMECInquireDEODetailsResponse.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/deoSchedule/CMECInquireDEODetailsRequest" schemaLocation="../../../bo/esb/deoSchedule/CMECInquireDEODetailsRequest.xsd"/>
+			<xsd:element name="InquireDEOSchedule">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="inquireDEOScheduleInput" nillable="true" type="bons3:CMECInquireDEODetailsRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="InquireDEOScheduleResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="inquireDEOScheduleOutput" nillable="true" type="bons4:CMECInquireDEODetailsResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="InquireDEOScheduleRequestMsg">
+    <wsdl:part element="tns:InquireDEOSchedule" name="InquireDEOScheduleParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="InquireDEOScheduleResponseMsg">
+    <wsdl:part element="tns:InquireDEOScheduleResponse" name="InquireDEOScheduleResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CMECInquireDEOScheduleWebservice">
+    <wsdl:operation name="InquireDEOSchedule">
+      <wsdl:input message="tns:InquireDEOScheduleRequestMsg" name="InquireDEOScheduleRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:InquireDEOScheduleResponseMsg" name="InquireDEOScheduleResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CMECInquireDEOScheduleWebserviceSOAP" type="tns:CMECInquireDEOScheduleWebservice">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="InquireDEOSchedule">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECInquireDEOScheduleWebservice/InquireDEOSchedule"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CMECInquireDEOScheduleWebservice">
+    <wsdl:port binding="tns:CMECInquireDEOScheduleWebserviceSOAP" name="CMECInquireDEOScheduleWebservice">
+      <soap:address location="http://localhost:8989/testSOAP/services/CMECInquireDEOScheduleWebservice"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

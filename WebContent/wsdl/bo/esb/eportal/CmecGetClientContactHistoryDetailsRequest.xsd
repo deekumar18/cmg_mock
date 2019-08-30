@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd" xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecContactHistoryTypesWrapper" xmlns:bons2="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecAttachmentTemplateWrapper" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetClientContactHistoryDetailsRequest">
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecAttachmentTemplateWrapper" schemaLocation="CmecAttachmentTemplateWrapper.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecContactHistoryTypesWrapper" schemaLocation="CmecContactHistoryTypesWrapper.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd" schemaLocation="../../common/CMECHeader.xsd">
+	</xsd:import>
+	<xsd:complexType name="CmecGetClientContactHistoryDetailsRequest">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="RequestHeader" type="bons0:CMECHeader">
+			</xsd:element>
+			<xsd:element minOccurs="1" name="SCIN" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="StartDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="EndDate" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HistoryStatus" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="uptoImpactLevel" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="CorrespondenceStatus" type="xsd:string">
+			</xsd:element>
+			<xsd:element maxOccurs="1" minOccurs="0" name="IncludeAttachmentTemplate" type="bons2:CmecAttachmentTemplateWrapper">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="HistoryType" type="bons1:CmecContactHistoryTypesWrapper">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

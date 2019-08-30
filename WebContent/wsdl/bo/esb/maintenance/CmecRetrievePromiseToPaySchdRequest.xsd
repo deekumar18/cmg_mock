@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/maintenance/CMECRetrievePromiseToPaySchdRequest">
+
+	<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd" schemaLocation="../../common/CMECHeader.xsd">
+	</xsd:import>
+	<xsd:complexType name="CmecRetrievePromiseToPaySchdRequest">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="RequestHeader" type="bons0:CMECHeader">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="nrpAccountNumber" type="xsd:string">
+
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="refId" type="xsd:string">
+
+			</xsd:element>
+			<xsd:element minOccurs="0" name="startDate" type="xsd:string">
+
+			</xsd:element>
+			<xsd:element minOccurs="0" name="endDate" type="xsd:string">
+
+			</xsd:element>
+			<xsd:element minOccurs="0" name="mopType" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="mopId" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="status" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="versionNumber" type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="pwcAccountNumber" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="serviceType" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

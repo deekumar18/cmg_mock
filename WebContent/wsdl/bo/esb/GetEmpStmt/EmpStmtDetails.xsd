@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/EmpStmtDetails">
+	<xsd:complexType name="EmpStmtDetails">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="transactionDate" type="xsd:string"/>
+
+			<xsd:element minOccurs="0" name="transactionDescription" type="xsd:string"/>
+			<xsd:element minOccurs="0" name="debitAmount" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="creditAmount" type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="balance" type="xsd:string">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

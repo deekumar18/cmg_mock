@@ -1,0 +1,141 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from CMECePortalGetEmployerContactHistoryWebService WSDL service -->
+
+  <service name="CMECePortalGetEmployerContactHistoryWebService" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECePortalGetEmployerContactHistoryWebService/"/>
+      <parameter name="wsdlServiceElement" value="CMECePortalGetEmployerContactHistoryWebService"/>
+      <parameter name="schemaUnqualified" value="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmployerContactHistoryDetailsRequest,http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECePortalGetEmployerContactHistoryWebService/,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalDocumentDetails,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecContactHistoryTypesWrapper,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/AttachmentTemplate,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecAttachmentTemplateWrapper,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalClientContactHistDetails,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalEnclosuresDetails,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmployerContactHistoryDetailsResponse,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalDocumentWrapper,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEportalClientContactHistory,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalEnclosuresWrapper,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd,http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecContactHistoryType"/>
+      <parameter name="wsdlServicePort" value="CMECePortalGetEmployerContactHistoryWebService"/>
+      <parameter name="className" value="uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECePortalGetEmployerContactHistoryWebService.CMECGetEmployerContactHistoryWebServiceSOAPSkeleton"/>
+      <parameter name="wsdlPortType" value="CMECePortalGetEmployerContactHistoryWebService"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <parameter name="allowedMethods" value="*"/>
+
+      <arrayMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEportalClientContactHistory"
+        qname="ns:CmecEportalContactHistory"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalClientContactHistDetails.CmecEPortalContactHistDetails[]"
+        innerType="cmp-ns:CmecEPortalContactHistDetails" xmlns:cmp-ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalClientContactHistDetails"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalDocumentDetails"
+        qname="ns:CmecEPortalDocumentDetails"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalDocumentDetails.CmecEPortalDocumentDetails"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/CMECHeader.xsd"
+        qname="ns:CMECHeader"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.CMECHeader_xsd.CMECHeader"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd"
+        qname="ns:>Response>responseDetails"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.ResponseResponseDetails"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/AttachmentTemplate"
+        qname="ns:AttachmentTemplate"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.AttachmentTemplate.AttachmentTemplate"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecAttachmentTemplateWrapper"
+        qname="ns:CmecAttachmentTemplateWrapper"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.AttachmentTemplate.AttachmentTemplate[]"
+        innerType="cmp-ns:AttachmentTemplate" xmlns:cmp-ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/AttachmentTemplate"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalEnclosuresDetails"
+        qname="ns:CmecEPortalEnclosuresDetails"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalEnclosuresDetails.CmecEPortalEnclosuresDetails"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmployerContactHistoryDetailsRequest"
+        qname="ns:CmecGetEmployerContactHistoryDetailsRequest"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecGetEmployerContactHistoryDetailsRequest.CmecGetEmployerContactHistoryDetailsRequest"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/common/Response.xsd"
+        qname="ns:Response"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.Response"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalClientContactHistDetails"
+        qname="ns:CmecEPortalContactHistDetails"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalClientContactHistDetails.CmecEPortalContactHistDetails"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecContactHistoryType"
+        qname="ns:CmecContactHistoryType"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecContactHistoryType.CmecContactHistoryType"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecContactHistoryTypesWrapper"
+        qname="ns:CmecContactHistoryTypesWrapper"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecContactHistoryType.CmecContactHistoryType[]"
+        innerType="cmp-ns:CmecContactHistoryType" xmlns:cmp-ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecContactHistoryType"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalDocumentWrapper"
+        qname="ns:CmecEPortalDocumentWrapper"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalDocumentDetails.CmecEPortalDocumentDetails[]"
+        innerType="cmp-ns:CmecEPortalDocumentDetails" xmlns:cmp-ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalDocumentDetails"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecGetEmployerContactHistoryDetailsResponse"
+        qname="ns:CmecGetEmployerContactHistoryDetailsResponse"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecGetEmployerContactHistoryDetailsResponse.CmecGetEmployerContactHistoryDetailsResponse"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <arrayMapping
+        xmlns:ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalEnclosuresWrapper"
+        qname="ns:CmecEPortalEnclosuresWrapper"
+        type="java:uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalEnclosuresDetails.CmecEPortalEnclosuresDetails[]"
+        innerType="cmp-ns:CmecEPortalEnclosuresDetails" xmlns:cmp-ns="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecEPortalEnclosuresDetails"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

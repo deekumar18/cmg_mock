@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:bons0="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecDelEmplyrCntctRequest" xmlns:bons1="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecAddUpdEmplyrCntctRequest" xmlns:bons2="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecUpdEmplyrResponse" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdEmplyrCntctWebService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CMECUpdEmplyrCntctWebService" targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdEmplyrCntctWebService">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdEmplyrCntctWebService">
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecDelEmplyrCntctRequest" schemaLocation="../../../bo/esb/eportal/CmecDelEmplyrCntctRequest.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecUpdEmplyrResponse" schemaLocation="../../../bo/esb/eportal/CmecUpdEmplyrResponse.xsd"/>
+			<xsd:import namespace="http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/eportal/CmecAddUpdEmplyrCntctRequest" schemaLocation="../../../bo/esb/eportal/CmecAddUpdEmplyrCntctRequest.xsd"/>
+			<xsd:element name="addEmployerContact">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="addEmplyrCntctRequest" type="bons1:CmecAddUpdEmplyrCntctRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="addEmployerContactResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="addEmplyrCntctResponse" type="bons2:CmecUpdEmplyrResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="updateEmployerContact">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="updEmplyrCntctRequest" nillable="true" type="bons1:CmecAddUpdEmplyrCntctRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="updateEmployerContactResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="updEmplyrCntctResponse" nillable="true" type="bons2:CmecUpdEmplyrResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="deleteEmployerContact">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="delEmplyrCntctRequest" nillable="true" type="bons0:CmecDelEmplyrCntctRequest"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="deleteEmployerContactResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="delEmplyrCntctResponse" nillable="true" type="bons2:CmecUpdEmplyrResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="deleteEmployerContactResponseMsg">
+    <wsdl:part element="tns:deleteEmployerContactResponse" name="deleteEmployerContactResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteEmployerContactRequestMsg">
+    <wsdl:part element="tns:deleteEmployerContact" name="deleteEmployerContactParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateEmployerContactResponseMsg">
+    <wsdl:part element="tns:updateEmployerContactResponse" name="updateEmployerContactResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateEmployerContactRequestMsg">
+    <wsdl:part element="tns:updateEmployerContact" name="updateEmployerContactParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addEmployerContactResponseMsg">
+    <wsdl:part element="tns:addEmployerContactResponse" name="addEmployerContactResult">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addEmployerContactRequestMsg">
+    <wsdl:part element="tns:addEmployerContact" name="addEmployerContactParameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CMECUpdEmplyrCntctWebService">
+    <wsdl:operation name="addEmployerContact">
+      <wsdl:input message="tns:addEmployerContactRequestMsg" name="addEmployerContactRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:addEmployerContactResponseMsg" name="addEmployerContactResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEmployerContact">
+      <wsdl:input message="tns:updateEmployerContactRequestMsg" name="updateEmployerContactRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:updateEmployerContactResponseMsg" name="updateEmployerContactResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEmployerContact">
+      <wsdl:input message="tns:deleteEmployerContactRequestMsg" name="deleteEmployerContactRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteEmployerContactResponseMsg" name="deleteEmployerContactResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CMECUpdEmplyrCntctWebServiceSOAP" type="tns:CMECUpdEmplyrCntctWebService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addEmployerContact">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdEmplyrCntctWebService/addEmployerContact"/>
+      <wsdl:input>
+        <soap:body parts="addEmployerContactParameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="addEmployerContactResult" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEmployerContact">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdEmplyrCntctWebService/updateEmployerContact"/>
+      <wsdl:input>
+        <soap:body parts="updateEmployerContactParameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="updateEmployerContactResult" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEmployerContact">
+      <soap:operation soapAction="http://www.childmaintenance.gsi.gov.uk/futurescheme/interfaces/CMECUpdEmplyrCntctWebService/deleteEmployerContact"/>
+      <wsdl:input>
+        <soap:body parts="deleteEmployerContactParameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="deleteEmployerContactResult" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CMECUpdEmplyrCntctWebService">
+    <wsdl:port binding="tns:CMECUpdEmplyrCntctWebServiceSOAP" name="CMECUpdEmplyrCntctWebService">
+      <soap:address location="http://localhost:8989/testSOAP/services/CMECUpdEmplyrCntctWebService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
