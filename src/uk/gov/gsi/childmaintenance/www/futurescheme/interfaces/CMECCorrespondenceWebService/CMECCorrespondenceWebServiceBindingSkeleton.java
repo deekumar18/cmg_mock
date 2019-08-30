@@ -51,9 +51,9 @@ public class CMECCorrespondenceWebServiceBindingSkeleton implements uk.gov.gsi.c
     public CMECCorrespondenceWebServiceBindingSkeleton(uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECCorrespondenceWebService.CMECCorrespondenceWebService impl) {
         this.impl = impl;
     }
-    public CMECLibraryR6.uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse.RetrieveDocumentResponse retrieveDocument(uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.correspondence.RetrieveDocumentRequest.RetrieveDocumentRequest retrieveDocumentRequest) throws java.rmi.RemoteException
+    public uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse retrieveDocument(uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.correspondence.RetrieveDocumentRequest.RetrieveDocumentRequest retrieveDocumentRequest) throws java.rmi.RemoteException
     {
-        CMECLibraryR6.uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse.RetrieveDocumentResponse ret = impl.retrieveDocument(retrieveDocumentRequest);
+        uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse ret = impl.retrieveDocument(retrieveDocumentRequest);
         return ret;
     }
 

@@ -8,5 +8,5 @@
 package uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECCorrespondenceWebService;
 
 public interface CMECCorrespondenceWebService extends java.rmi.Remote {
-    public CMECLibraryR6.uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse.RetrieveDocumentResponse retrieveDocument(uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.correspondence.RetrieveDocumentRequest.RetrieveDocumentRequest retrieveDocumentRequest) throws java.rmi.RemoteException;
+    public uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse retrieveDocument(uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.correspondence.RetrieveDocumentRequest.RetrieveDocumentRequest retrieveDocumentRequest) throws java.rmi.RemoteException;
 }

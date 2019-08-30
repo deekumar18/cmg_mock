@@ -27,9 +27,9 @@ public class CMECCorrespondenceWebServiceBindingStub extends org.apache.axis.cli
         oper.setName("retrieveDocument");
         param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/correspondence/RetrieveDocumentRequest", "retrieveDocumentRequest"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.childmaintenance.gsi.gov.uk/futurescheme/bo/esb/correspondence/RetrieveDocumentRequest", "RetrieveDocumentRequest"), uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.correspondence.RetrieveDocumentRequest.RetrieveDocumentRequest.class, false, false);
         oper.addParameter(param);
-        oper.setReturnType(new javax.xml.namespace.QName("http://CMECLibraryR6/uk/gov/futurescheme/cmec/bo/esb/correspondence/RetrieveDocumentResponse", "RetrieveDocumentResponse"));
-        oper.setReturnClass(CMECLibraryR6.uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse.RetrieveDocumentResponse.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("http://CMECLibraryR6/uk/gov/futurescheme/cmec/bo/esb/correspondence/RetrieveDocumentResponse", "retrieveDocumentResponse"));
+        oper.setReturnType(new javax.xml.namespace.QName("http://uk/gov/futurescheme/cmec/bo/esb/correspondence/", "RetrieveDocumentResponse"));
+        oper.setReturnClass(uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse.class);
+        oper.setReturnQName(new javax.xml.namespace.QName("http://uk/gov/futurescheme/cmec/bo/esb/correspondence/RetrieveDocumentResponse", "retrieveDocumentResponse"));
         oper.setStyle(org.apache.axis.constants.Style.DOCUMENT);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
         _operations[0] = oper;
@@ -67,7 +67,7 @@ public class CMECCorrespondenceWebServiceBindingStub extends org.apache.axis.cli
             java.lang.Class simplelistdf = org.apache.axis.encoding.ser.SimpleListDeserializerFactory.class;
             qName = new javax.xml.namespace.QName("http://CMECLibraryR6/uk/gov/futurescheme/cmec/bo/esb/correspondence/RetrieveDocumentResponse", "RetrieveDocumentResponse");
             cachedSerQNames.add(qName);
-            cls = CMECLibraryR6.uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse.RetrieveDocumentResponse.class;
+            cls = uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse.class;
             cachedSerClasses.add(cls);
             cachedSerFactories.add(beansf);
             cachedDeserFactories.add(beandf);
@@ -173,7 +173,7 @@ public class CMECCorrespondenceWebServiceBindingStub extends org.apache.axis.cli
         }
     }
 
-    public CMECLibraryR6.uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse.RetrieveDocumentResponse retrieveDocument(uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.correspondence.RetrieveDocumentRequest.RetrieveDocumentRequest retrieveDocumentRequest) throws java.rmi.RemoteException {
+    public uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse retrieveDocument(uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.correspondence.RetrieveDocumentRequest.RetrieveDocumentRequest retrieveDocumentRequest) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -197,9 +197,9 @@ public class CMECCorrespondenceWebServiceBindingStub extends org.apache.axis.cli
         else {
             extractAttachments(_call);
             try {
-                return (CMECLibraryR6.uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse.RetrieveDocumentResponse) _resp;
+                return (uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse) _resp;
             } catch (java.lang.Exception _exception) {
-                return (CMECLibraryR6.uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse.RetrieveDocumentResponse) org.apache.axis.utils.JavaUtils.convert(_resp, CMECLibraryR6.uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse.RetrieveDocumentResponse.class);
+                return (uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse) org.apache.axis.utils.JavaUtils.convert(_resp, uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse.class);
             }
         }
   } catch (org.apache.axis.AxisFault axisFaultException) {

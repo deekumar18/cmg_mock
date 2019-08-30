@@ -15,15 +15,15 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 
-import CMECLibraryR6.uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse.RetrieveDocumentResponse;
 import uk.gov.dwp.esb.harddata.CorrespondenceResponseHD;
 import uk.gov.dwp.esb.utils.DBUtil;
 import uk.gov.dwp.esb.vo.CorrespondenceResponseVO;
+import uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse;
 import uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.Response;
 import uk.gov.gsi.childmaintenance.www.futurescheme.bo.gbo.correspondence.Content_xsd.Content;
 
 public class CMECCorrespondenceWebServiceBindingImpl implements uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECCorrespondenceWebService.CMECCorrespondenceWebService{
-    public CMECLibraryR6.uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse.RetrieveDocumentResponse retrieveDocument(uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.correspondence.RetrieveDocumentRequest.RetrieveDocumentRequest retrieveDocumentRequest) throws java.rmi.RemoteException {
+    public uk.gov.futurescheme.cmec.bo.esb.correspondence.RetrieveDocumentResponse retrieveDocument(uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.correspondence.RetrieveDocumentRequest.RetrieveDocumentRequest retrieveDocumentRequest) throws java.rmi.RemoteException {
 
     	final boolean DYNAMIC_FLAG = false;
 

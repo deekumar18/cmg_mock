@@ -7,21 +7,14 @@
 
 package uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECGetEmployerDetailsWebService;
 
-<<<<<<< HEAD
-=======
 import java.lang.reflect.InvocationTargetException;
 
->>>>>>> d7c2d3d9a022920211eca07cd940241f72f2d557
 import com.google.gson.Gson;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
-import com.mongodb.Mongo;
 
-<<<<<<< HEAD
-import uk.gov.dwp.esb.vo.ClientDetailsResponseVO;
-=======
 import uk.gov.dwp.esb.utils.DBUtil;
 import uk.gov.dwp.esb.vo.AccountDetail;
 import uk.gov.dwp.esb.vo.BwzResponsesWrapper;
@@ -29,7 +22,6 @@ import uk.gov.dwp.esb.vo.EmployerAddress;
 import uk.gov.dwp.esb.vo.EmployerContact;
 import uk.gov.dwp.esb.vo.EmployerDetailsResponseVO;
 import uk.gov.dwp.esb.vo.FinCorpDetail;
->>>>>>> d7c2d3d9a022920211eca07cd940241f72f2d557
 import uk.gov.gsi.childmaintenance.www.futurescheme.bo.common.Response_xsd.Response;
 import uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalAccountDetails.CmecEPortalAccountDetails;
 import uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalAddress.CmecEPortalAddress;
@@ -39,20 +31,6 @@ import uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecEPortalFi
 import uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecGetEmployerDetailsResponse.CmecGetEmployerDetailsResponse;
 import uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.payment.BankWizardResponseDetail.BankWizardResponseDetail;
 
-<<<<<<< HEAD
-public class CMECGetEmployerDetailsWebServiceSOAPImpl implements uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECGetEmployerDetailsWebService.CMECePortalGetEmployerWebService_PortType{
-    public uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecGetEmployerDetailsResponse.CmecGetEmployerDetailsResponse getEmployerDetails(uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecGetEmployerDetailsRequest.CmecGetEmployerDetailsRequest getEmployerDetailsInput) throws java.rmi.RemoteException {
-       
-    	CmecGetEmployerDetailsResponse result = new CmecGetEmployerDetailsResponse();
-    	System.out.println(getEmployerDetailsInput.getEmployerReferenceNum());
-    	
-    	Response res = new Response();
-    	res.setResponseCode(400);
-    	result.setResponseHeader(res);
-    	
-		Mongo mongo = new Mongo("localhost", 27017);
-		DB db = mongo.getDB("cmg_mock");
-=======
 public class CMECGetEmployerDetailsWebServiceSOAPImpl implements
 		uk.gov.gsi.childmaintenance.www.futurescheme.interfaces.CMECGetEmployerDetailsWebService.CMECePortalGetEmployerWebService_PortType {
 	public uk.gov.gsi.childmaintenance.www.futurescheme.bo.esb.eportal.CmecGetEmployerDetailsResponse.CmecGetEmployerDetailsResponse getEmployerDetails(
@@ -63,7 +41,7 @@ public class CMECGetEmployerDetailsWebServiceSOAPImpl implements
 		System.out.println(getEmployerDetailsInput.getEmployerReferenceNum());
 
 		DB db = DBUtil.getMongoDatabase();
->>>>>>> d7c2d3d9a022920211eca07cd940241f72f2d557
+
 		DBCollection collection = db.getCollection("employerdetails");
 		BasicDBObject criteria = new BasicDBObject();
 		criteria.append("employerDetails.employerRefNum", getEmployerDetailsInput.getEmployerReferenceNum());
@@ -76,20 +54,8 @@ public class CMECGetEmployerDetailsWebServiceSOAPImpl implements
 		} finally {
 			cursor.close();
 		}
-<<<<<<< HEAD
-    	
-		System.out.println(sb);
-		//Employer`DetailsResponseVO clientDetailsResponseVO = new Gson().fromJson(sb.toString(),
-			//	ClientDetailsResponseVO.class);
 
-		
     	
-    	return result;
-    }
-    
-=======
-
-		System.out.println(sb);
 		EmployerDetailsResponseVO employerDetailsResponseVO = new Gson().fromJson(sb.toString(),
 				EmployerDetailsResponseVO.class);
 
@@ -197,5 +163,5 @@ public class CMECGetEmployerDetailsWebServiceSOAPImpl implements
 		return result;
 	}
 
->>>>>>> d7c2d3d9a022920211eca07cd940241f72f2d557
+
 }
